@@ -1,0 +1,25 @@
+//* Styles NavLink
+.nav__link {
+   display: inline-block;
+   position: relative;
+   color: #fca311;
+   padding: 0.2rem;
+   font-size: 1rem;
+
+   &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0.1rem;
+      background-color: #8d99ae;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s;
+   }
+   &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+   }
+}
