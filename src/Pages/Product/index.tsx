@@ -1,5 +1,6 @@
 import {
    Box,
+   Center,
    Divider,
    Flex,
    Heading,
@@ -11,6 +12,8 @@ import { Navigation } from "../../components/Navigation";
 import { ProductHero } from "../../components/ProductHero";
 import { SlideCard } from "../../components/SlideCards/SlideCard";
 import { carditems } from "../../data/carditemprops";
+import { TableProductHero } from "../../components/TableProductHero";
+import { Footer } from "../../components/Footer";
 
 export function Product() {
    return (
@@ -44,7 +47,24 @@ export function Product() {
          <Flex align={"center"} justify={"center"}>
             <Divider w={"50%"} h={"0.2rem"} bg={"yellow.10"} my={"1rem"} />
          </Flex>
+
+         <Center>
+            <Heading
+               pt={"3.5rem"}
+               fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+            >
+               <Text as={"h3"} fontWeight={"thin"}>
+                  Table Products
+               </Text>
+            </Heading>
+         </Center>
+
+         <Box mx={"auto"} maxW={"1200px"} w={"100%"} py={"2rem"}>
+            <TableProductHero name="Product" price="12.99" />
+         </Box>
          <Box py={"5rem"}>{carditems && <SlideCard cards={carditems} />}</Box>
+
+         <Footer title="© 2022 Fiq | Limp. All rights reserved" />
       </section>
    );
 }

@@ -7,7 +7,7 @@ export interface CardsItemsProps {
    id?: number;
    name: string;
    price: string;
-   image: any;
+   image?: any;
 }
 
 const carditems: CardsItemsProps[] = [

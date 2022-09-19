@@ -3,6 +3,8 @@ import { useColorModeValue } from "@chakra-ui/react";
 export function useColor() {
    const bg__navigation = useColorModeValue("gray.100", "gray.900");
 
+   // * Cards ProductHero
+   const bg__cards_product = useColorModeValue("white", "gray.800");
 
 
 
@@ -27,5 +29,6 @@ export function useColor() {
       background__footer,
       bg__color_footer,
       border__color_footer,
+      bg__cards_product
    }
 }

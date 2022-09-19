@@ -1,9 +1,11 @@
 import { Box, Flex, chakra, Icon } from "@chakra-ui/react";
 import { CardsProps } from "../../data/cardsprops";
+import { useColor } from "../../hooks/useColor";
 
 import styles from "./styles.module.scss";
 
 export function CardsItems({ title, content, icon }: CardsProps) {
+   const { bg__cards_product } = useColor();
    return (
       <section>
          <Flex className={styles.card__items}>
@@ -12,12 +14,14 @@ export function CardsItems({ title, content, icon }: CardsProps) {
                maxW={"sm"}
                px={4}
                py={3}
-               bg={"white"}
-               _dark={{
-                  bg: "orange.400",
-               }}
-               shadow={"lg"}
+               bg={bg__cards_product}
+               shadow={"2xl"}
                rounded={"md"}
+               transition={"all 0.5s ease-in-out"}
+               _hover={{
+                  bg: "orange.500",
+               }}
+               cursor={"pointer"}
             >
                <Flex
                   justifyContent={"center"}
