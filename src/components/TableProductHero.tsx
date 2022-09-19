@@ -8,13 +8,13 @@ import {
    Thead,
    Tr,
 } from "@chakra-ui/react";
-import { CardsItemsProps } from "../data/carditemprops";
+import { CardsProps } from "../types/CardsProps";
 
-export function TableProductHero({ name, price }: CardsItemsProps) {
+export function TableProductHero({ name, price }: CardsProps) {
    return (
       <TableContainer>
-         <Table variant={"striped"} colorScheme={"orange"}>
-            <TableCaption>Imperial to metric conversion factors</TableCaption>
+         <Table colorScheme={"orange"}>
+            <TableCaption>Products On Sale</TableCaption>
             <Thead>
                <Tr>
                   <Th>Products</Th>

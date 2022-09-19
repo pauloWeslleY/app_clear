@@ -12,6 +12,8 @@ interface Props {
 }
 
 export function ProductHero({ title }: Props) {
+   const fontsSize = useBreakpointValue({ base: "3xl", md: "4xl" });
+
    return (
       <Flex
          w={"full"}
@@ -31,7 +33,7 @@ export function ProductHero({ title }: Props) {
                   color={"white"}
                   fontWeight={700}
                   lineHeight={1.2}
-                  fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+                  fontSize={fontsSize}
                >
                   {title}
                </Text>

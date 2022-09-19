@@ -5,7 +5,7 @@ import { Navigation, Pagination, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./styles.scss";
+import "./Slider.scss";
 
 interface SliderProps {
    settings: SwiperProps;

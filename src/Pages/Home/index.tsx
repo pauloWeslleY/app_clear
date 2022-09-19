@@ -29,7 +29,7 @@ export function Home() {
             title="Ready to dive in?"
             subtitle="Start your free trial today."
          />
-         <Container maxW={"1440px"}>
+         <Container maxW={"1200px"}>
             <MainHero />
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                <Stack justify={"center"} spacing={4}>
@@ -54,7 +54,7 @@ export function Home() {
                <Flex py={"1.5rem"}>
                   <Image
                      rounded={"md"}
-                     alt={"feature image"}
+                     alt={"Imagens do Site"}
                      src={Banner}
                      objectFit={"cover"}
                   />

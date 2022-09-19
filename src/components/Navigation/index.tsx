@@ -32,13 +32,12 @@ export function Navigation() {
       </NavLink>
    );
 
-   const getNav = () => {
-      return navlink_props.map((nav) => (
+   const getNav = () =>
+      navlink_props.map((nav) => (
          <NavItems key={nav.id} path={nav.path}>
             {nav.page}
          </NavItems>
       ));
-   };
 
    return (
       <Box bg={bg__navigation} shadow={"dark-lg"} px={4}>

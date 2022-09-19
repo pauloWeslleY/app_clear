@@ -1,5 +1,4 @@
 import { Flex, Box, chakra } from "@chakra-ui/react";
-
 interface ActionProps {
    title: string;
    subtitle: string;

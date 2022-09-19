@@ -8,12 +8,12 @@ export function ButtonDarkMode(props: any) {
 
    return (
       <IconButton
-         size="md"
-         fontSize="lg"
+         size={"md"}
+         fontSize={"lg"}
          aria-label={`Switch to ${text} mode`}
-         variant="ghost"
-         color="current"
-         marginLeft="2"
+         variant={"ghost"}
+         color={"current"}
+         marginLeft={"2"}
          onClick={toggleColorMode}
          icon={<SwitchIcon />}
          {...props}

@@ -1,10 +1,11 @@
 //* Styles NavLink
-.nav__link {
+.menu__footer_items {
    display: inline-block;
    position: relative;
    color: #fca311;
    padding: 0.2rem;
-   font-size: 1rem;
+   font-size: 1.2rem;
+   font-weight: bold;
 
    &::after {
       content: "";

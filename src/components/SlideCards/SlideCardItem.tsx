@@ -7,10 +7,10 @@ import {
    Stack,
    Image,
 } from "@chakra-ui/react";
-import { CardsItemsProps } from "../../data/carditemprops";
+import { CardsProps } from "../../types/CardsProps";
 
 interface Cards {
-   card: CardsItemsProps;
+   card: CardsProps;
 }
 
 export function SlideCardItem({ card }: Cards) {
@@ -69,7 +69,7 @@ export function SlideCardItem({ card }: Cards) {
                   {name}
                </Heading>
                <Stack direction={"row"} align={"center"}>
-                  <Text as={"span"} fontWeight={300} fontSize={"xl"}>
+                  <Text as={"span"} fontWeight={500} fontSize={"xl"}>
                      {price}
                   </Text>
                </Stack>

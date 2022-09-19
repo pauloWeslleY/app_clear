@@ -2,14 +2,14 @@ import { FiUsers } from "react-icons/fi";
 import { ImWrench } from "react-icons/im";
 import { MdWork } from "react-icons/md";
 
-export interface CardsProps {
+export interface CardHeroProps {
    id?: string;
    title: string;
    content: string;
    icon: any;
 }
 
-export const cardsprops: CardsProps[] = [
+export const cards__hero: CardHeroProps[] = [
    {
       id: "1",
       icon: ImWrench,

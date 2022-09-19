@@ -17,16 +17,16 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
          py={{ base: 20, md: 25 }}
       >
          <Heading
-            fontWeight={600}
+            fontWeight={"semibold"}
             fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
             lineHeight={"110%"}
          >
             {title}{" "}
-            <Text as={"span"} color={"yellow.10"}>
+            <Text as={"span"} color={"yellow.10"} fontWeight={"thin"}>
                {subtitle}
             </Text>
          </Heading>
-         <Text fontSize={"1rem"} color={"gray.500"} maxW={"3xl"}>
+         <Text fontSize={"1.2rem"} color={"gray.500"} maxW={"3xl"}>
             {textContent}
          </Text>
          <Flex alignItems={"center"}>
@@ -35,7 +35,7 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
                w={400}
                objectFit={"cover"}
                src={Banner2}
-               alt="Banner do Site"
+               alt={"Banner do Site"}
             />
          </Flex>
       </Stack>

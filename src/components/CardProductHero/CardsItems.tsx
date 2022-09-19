@@ -1,16 +1,16 @@
 import { Box, Flex, chakra, Icon } from "@chakra-ui/react";
-import { CardsProps } from "../../data/cardsprops";
+import { CardHeroProps } from "../../data/CardsHeroProps";
 import { useColor } from "../../hooks/useColor";
 
 import styles from "./styles.module.scss";
 
-export function CardsItems({ title, content, icon }: CardsProps) {
+export function CardsItems({ title, content, icon }: CardHeroProps) {
    const { bg__cards_product } = useColor();
    return (
       <section>
          <Flex className={styles.card__items}>
             <Box
-               w={"full"}
+               w={"100%"}
                maxW={"sm"}
                px={4}
                py={3}
@@ -28,7 +28,7 @@ export function CardsItems({ title, content, icon }: CardsProps) {
                   alignItems={"center"}
                   py={"0.9rem"}
                >
-                  <Icon as={icon} w={"9rem"} h={"9rem"} />
+                  <Icon as={icon} w={"8rem"} h={"9rem"} />
                </Flex>
 
                <Box textAlign={"center"}>

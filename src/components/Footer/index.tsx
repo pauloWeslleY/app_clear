@@ -9,7 +9,9 @@ import {
 } from "@chakra-ui/react";
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { menuFooter } from "./MenuFooter";
+
 import { useColor } from "./../../hooks/useColor";
+
 import { Logo } from "./Logo";
 
 interface Props {
@@ -23,11 +25,10 @@ interface Footer {
 }
 
 const SocialButton = ({ children, label, href }: Props) => {
-   const { background_footer_button, background_footer_button_hover } =
-      useColor();
+   const { bg_footer_button, bg_footer_button_hover } = useColor();
    return (
       <chakra.button
-         bg={background_footer_button}
+         bg={bg_footer_button}
          rounded={"full"}
          w={8}
          h={8}
@@ -37,9 +38,9 @@ const SocialButton = ({ children, label, href }: Props) => {
          display={"inline-flex"}
          alignItems={"center"}
          justifyContent={"center"}
-         transition={"background 0.3s ease"}
+         transition={"all 0.3s ease-in-out"}
          _hover={{
-            bg: background_footer_button_hover,
+            bg: bg_footer_button_hover,
          }}
       >
          <VisuallyHidden>{label}</VisuallyHidden>
@@ -49,10 +50,9 @@ const SocialButton = ({ children, label, href }: Props) => {
 };
 
 export function Footer({ title }: Footer) {
-   const { background__footer, bg__color_footer, border__color_footer } =
-      useColor();
+   const { bg__footer, color__footer, border__color_footer } = useColor();
    return (
-      <Box bg={background__footer} color={bg__color_footer}>
+      <Box bg={bg__footer} color={color__footer}>
          <Container
             as={Stack}
             maxW={"6xl"}
@@ -81,7 +81,9 @@ export function Footer({ title }: Footer) {
                justify={{ base: "center", md: "space-between" }}
                align={{ base: "center", md: "center" }}
             >
-               <Text>{title}</Text>
+               <Text as={"span"} fontSize={"1rem"} fontWeight={"semibold"}>
+                  {title}
+               </Text>
                <Stack direction={"row"} spacing={6}>
                   <SocialButton label={"Twitter"} href={"#"}>
                      <FaFacebook />

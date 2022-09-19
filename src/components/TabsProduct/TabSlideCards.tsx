@@ -1,17 +1,18 @@
-import { SliderCarousel, Slide, SliderProps } from "../Slider";
-import { CardsProps } from "../../types/CardsProps";
-import { SlideCardItem } from "./SlideCardItem";
 import { Center } from "@chakra-ui/react";
+import { SliderCarousel, Slide, SliderProps } from "../Slider";
+import { TabCardItems } from "./TabCardItems";
+
+import { CardsProps } from "../../types/CardsProps";
 
 interface CardSliderProps {
    cards: CardsProps[];
 }
 
-export function SlideCard({ cards }: CardSliderProps) {
+export function TabSlideCards({ cards }: CardSliderProps) {
    if (cards.length === 1) {
       return (
          <Center>
-            <SlideCardItem card={cards[0]} />
+            <TabCardItems card={cards[0]} />
          </Center>
       );
    }
@@ -19,7 +20,7 @@ export function SlideCard({ cards }: CardSliderProps) {
    const settings: SliderProps = {
       spaceBetween: 50,
       slidesPerView: cards.length < 3 ? cards.length : 3,
-      navigation: cards.length >= 3 && true,
+      navigation: false,
       draggable: cards.length >= 3,
       loop: cards.length >= 3,
       pagination: cards.length >= 3 && {
@@ -44,7 +45,7 @@ export function SlideCard({ cards }: CardSliderProps) {
       <SliderCarousel settings={settings}>
          {cards.map((card) => (
             <Slide key={card.id}>
-               <SlideCardItem card={card} />
+               <TabCardItems card={card} />
             </Slide>
          ))}
       </SliderCarousel>

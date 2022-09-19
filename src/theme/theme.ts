@@ -1,9 +1,15 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
 
 //? Include custom option in here... colors, fonts, etc!!
 const customTheme = {};
 
+const config: ThemeConfig = {
+   initialColorMode: 'light',
+   useSystemColorMode: true
+}
+
 const theme = extendTheme(customTheme, {
+   config,
    fonts: {
       body: 'Roboto'
    },

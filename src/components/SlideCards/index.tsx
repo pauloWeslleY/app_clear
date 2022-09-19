@@ -1,5 +1,5 @@
 import { SlideCardItem } from "./SlideCardItem";
-import { CardsItemsProps } from "../../data/carditemprops";
+import { CardsProps } from "../../types/CardsProps";
 
 export { SlideCardItem };
-export type { CardsItemsProps };
+export type { CardsProps };

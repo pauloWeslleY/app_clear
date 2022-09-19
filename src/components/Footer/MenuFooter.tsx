@@ -1,6 +1,9 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
+
 import { navlink_props } from "./../../data/navprops";
+
+import "./footer.scss";
 
 interface Props {
    path: string;
@@ -9,7 +12,7 @@ interface Props {
 
 const MenuFooter: React.FC<any> = ({ children, path }: Props) => (
    <Link to={`/${path}`}>
-      <button className="nav__link">{children}</button>
+      <button className="menu__footer_items">{children}</button>
    </Link>
 );
 

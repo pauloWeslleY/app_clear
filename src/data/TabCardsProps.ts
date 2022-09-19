@@ -3,9 +3,9 @@ import Product2 from './../assets/product_2.jpg';
 import Product3 from './../assets/product_3.jpg';
 import Product4 from './../assets/product_4.jpg';
 
-import { CardsProps } from './../types/CardsProps';
+import { CardsProps } from '../types/CardsProps';
 
-const carditems: CardsProps[] = [
+const tab__cards: CardsProps[] = [
    {
       id: 1,
       name: "Gary Plus Broom",
@@ -33,15 +33,27 @@ const carditems: CardsProps[] = [
    {
       id: 5,
       name: "Nylon2",
-      image: Product4,
+      image: Product3,
       price: "100.50"
    },
    {
       id: 6,
       name: "Nylon Thine",
-      image: Product4,
+      image: Product2,
+      price: "45.00"
+   },
+   {
+      id: 7,
+      name: "Nylon Thine",
+      image: Product2,
+      price: "45.00"
+   },
+   {
+      id: 8,
+      name: "Nylon Thine",
+      image: Product1,
       price: "45.00"
    },
 ]
 
-export {carditems}
+export {tab__cards}
