@@ -61,7 +61,6 @@ export function Product() {
                xl: "8xl",
             }}
             w={"100%"}
-            px={"4rem"}
          >
             <CardsProductHero />
 
@@ -96,10 +95,22 @@ export function Product() {
                   </Heading>
                </Stack>
             </Box>
-            <Box mx={"auto"} w={"100%"} py={"5rem"}>
-               {carditems && <SlideCard cards={carditems} />}
-            </Box>
+         </Container>
 
+         <Box mx={"auto"} w={"100%"} maxW={"1245px"} py={"5rem"}>
+            {carditems && <SlideCard cards={carditems} />}
+         </Box>
+
+         <Container
+            maxW={{
+               base: "1220px",
+               sm: "550px",
+               md: "1024px",
+               lg: "1350px",
+               xl: "8xl",
+            }}
+            w={"100%"}
+         >
             <Flex align={"center"} justify={"center"}>
                <Divider w={"50%"} h={"0.2rem"} bg={"yellow.10"} my={"1rem"} />
             </Flex>
