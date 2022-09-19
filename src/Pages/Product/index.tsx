@@ -1,7 +1,16 @@
-import { Flex, Heading, Text, useBreakpointValue } from "@chakra-ui/react";
+import {
+   Box,
+   Divider,
+   Flex,
+   Heading,
+   Text,
+   useBreakpointValue,
+} from "@chakra-ui/react";
 import { Cards } from "../../components/Cards/Cards";
 import { Navigation } from "../../components/Navigation";
 import { ProductHero } from "../../components/ProductHero";
+import { SlideCard } from "../../components/SlideCards/SlideCard";
+import { carditems } from "../../data/carditemprops";
 
 export function Product() {
    return (
@@ -32,6 +41,10 @@ export function Product() {
             </Heading>
          </Flex>
          <Cards />
+         <Flex align={"center"} justify={"center"}>
+            <Divider w={"50%"} h={"0.2rem"} bg={"yellow.10"} my={"1rem"} />
+         </Flex>
+         <Box py={"5rem"}>{carditems && <SlideCard cards={carditems} />}</Box>
       </section>
    );
 }

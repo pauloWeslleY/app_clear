@@ -8,13 +8,13 @@ import {
    Stack,
 } from "@chakra-ui/react";
 
-import { Banner } from "./../../data/photos";
-
 import { Navigation } from "./../../components/Navigation";
 import { BannerHero } from "./../../components/BannerHero";
 import { MainHero } from "./../../components/MainHero";
 import { ActionHero } from "./../../components/ActionHero";
 import { Footer } from "./../../components/Footer";
+
+import { Banner } from "./../../data/photos";
 
 export function Home() {
    return (
