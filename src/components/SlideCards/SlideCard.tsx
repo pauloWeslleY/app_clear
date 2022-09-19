@@ -22,8 +22,22 @@ export function SlideCard({ cards }: CardSliderProps) {
       navigation: cards.length >= 3 && true,
       draggable: cards.length >= 3,
       loop: cards.length >= 3,
-      pagination: {
+      pagination: cards.length >= 3 && {
          clickable: true,
+      },
+      breakpoints: {
+         320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+         },
+         800: {
+            slidesPerView: cards.length < 2 ? cards.length : 2,
+            slidesPerGroup: cards.length < 2 ? cards.length : 2,
+         },
+         1200: {
+            slidesPerView: cards.length < 3 ? cards.length : 3,
+            slidesPerGroup: cards.length < 3 ? cards.length : 3,
+         },
       },
    };
    return (

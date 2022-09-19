@@ -18,24 +18,24 @@ export function TableProductHero({ name, price }: CardsItemsProps) {
             <Thead>
                <Tr>
                   <Th>Products</Th>
-                  <Th>into</Th>
+                  <Th>Name</Th>
                   <Th isNumeric>Price</Th>
                </Tr>
             </Thead>
             <Tbody>
                <Tr>
                   <Td>{name}</Td>
-                  <Td>Gary Plus Broom (mm)</Td>
+                  <Td>Gary Plus Broom</Td>
                   <Td isNumeric>{price}</Td>
                </Tr>
                <Tr>
                   <Td>{name}</Td>
-                  <Td>Sanfonado Sink Plunger (cm)</Td>
+                  <Td>Sanfonado Sink Plunger</Td>
                   <Td isNumeric>{price}</Td>
                </Tr>
                <Tr>
                   <Td>{name}</Td>
-                  <Td>Lava Bus Wood Base (m)</Td>
+                  <Td>Lava Bus Wood Base</Td>
                   <Td isNumeric>{price}</Td>
                </Tr>
             </Tbody>

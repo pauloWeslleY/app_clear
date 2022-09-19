@@ -59,8 +59,8 @@ export function Navigation() {
             />
             <HStack spacing={8}>
                <Box>
-                  <chakra.h1 fontSize={"xl"} fontWeight={"medium"} ml={"2"}>
-                     App Fiq | Limp
+                  <chakra.h1 fontSize={"xl"} fontWeight={"extrabold"} ml={"2"}>
+                     App Fiq<chakra.span color={"yellow.10"}>Limp.</chakra.span>
                   </chakra.h1>
                </Box>
                <HStack

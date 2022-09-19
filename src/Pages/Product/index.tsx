@@ -20,7 +20,8 @@ export function Product() {
       <section>
          <Navigation />
          <ProductHero title="Ipsum dolor sed accusam sea voluptua ipsum consetetur diam, consetetur." />
-         <Flex alignItems={"center"} justify={"center"} py={"2.5rem"}>
+
+         <Flex alignItems={"center"} justify={"center"} pt={"2.5rem"}>
             <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
                <Text
                   as={"span"}
@@ -39,10 +40,11 @@ export function Product() {
                   Our
                </Text>{" "}
                <Text color={"yellow.10"} as={"span"}>
-                  Products
+                  Services
                </Text>{" "}
             </Heading>
          </Flex>
+
          <Cards />
          <Flex align={"center"} justify={"center"}>
             <Divider w={"50%"} h={"0.2rem"} bg={"yellow.10"} my={"1rem"} />
@@ -62,7 +64,10 @@ export function Product() {
          <Box mx={"auto"} maxW={"1200px"} w={"100%"} py={"2rem"}>
             <TableProductHero name="Product" price="12.99" />
          </Box>
-         <Box py={"5rem"}>{carditems && <SlideCard cards={carditems} />}</Box>
+
+         <Box mx={"auto"} w={"100%"} maxW={"1200px"} py={"5rem"}>
+            {carditems && <SlideCard cards={carditems} />}
+         </Box>
 
          <Footer title="© 2022 Fiq | Limp. All rights reserved" />
       </section>
