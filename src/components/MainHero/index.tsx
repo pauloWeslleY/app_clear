@@ -8,7 +8,7 @@ import {
    Flex,
    Container,
 } from "@chakra-ui/react";
-import { FcAssistant, FcDonate, FcInTransit } from "react-icons/fc";
+import { BsCheckLg } from "react-icons/bs";
 
 interface FeatureProps {
    title: string;
@@ -24,7 +24,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
             h={16}
             alignItems={"center"}
             justifyContent={"center"}
-            color={"white"}
+            color={"yellow.10"}
             rounded={"full"}
             bg={"gray.100"}
             mb={1}
@@ -43,21 +43,21 @@ export function MainHero() {
          <Box p={12}>
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
                <Feature
-                  icon={<Icon as={FcAssistant} w={10} h={10} />}
+                  icon={<Icon as={BsCheckLg} w={10} h={10} />}
                   title={"Lifetime Support"}
                   text={
                      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
                   }
                />
                <Feature
-                  icon={<Icon as={FcDonate} w={10} h={10} />}
+                  icon={<Icon as={BsCheckLg} w={10} h={10} />}
                   title={"Unlimited Donations"}
                   text={
                      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
                   }
                />
                <Feature
-                  icon={<Icon as={FcInTransit} w={10} h={10} />}
+                  icon={<Icon as={BsCheckLg} w={10} h={10} />}
                   title={"Instant Delivery"}
                   text={
                      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."

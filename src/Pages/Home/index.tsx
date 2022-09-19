@@ -29,8 +29,8 @@ export function Home() {
             title="Ready to dive in?"
             subtitle="Start your free trial today."
          />
-         <MainHero />
-         <Container maxW={"5xl"} py={12}>
+         <Container maxW={"1440px"}>
+            <MainHero />
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                <Stack justify={"center"} spacing={4}>
                   <Text
@@ -51,7 +51,7 @@ export function Home() {
                      sed diam nonumy eirmod tempor invidunt ut labore
                   </Text>
                </Stack>
-               <Flex>
+               <Flex py={"1.5rem"}>
                   <Image
                      rounded={"md"}
                      alt={"feature image"}

@@ -42,7 +42,12 @@ export function Navigation() {
 
    return (
       <Box bg={bg__navigation} shadow={"dark-lg"} px={4}>
-         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+         <Flex
+            h={16}
+            alignItems={"center"}
+            justify={"space-around"}
+            maxW={"1xl"}
+         >
             <IconButton
                size={"md"}
                icon={isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
@@ -55,7 +60,7 @@ export function Navigation() {
             <HStack spacing={8}>
                <Box>
                   <chakra.h1 fontSize={"xl"} fontWeight={"medium"} ml={"2"}>
-                     Fiq | Limp
+                     App Fiq | Limp
                   </chakra.h1>
                </Box>
                <HStack

@@ -11,7 +11,7 @@ export function ActionHero({ title, subtitle }: ActionProps) {
          justify={"center"}
          bg={"orange.300"}
          _dark={{
-            bg: "orange.800",
+            bg: "yellow.800",
          }}
          w={"full"}
       >

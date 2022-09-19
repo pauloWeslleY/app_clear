@@ -8,7 +8,7 @@ export const navlink_props: NavProps[] = [
    {
       id: "home",
       page: "Home",
-      path: "home"
+      path: ""
    },
    {
       id: "product",
