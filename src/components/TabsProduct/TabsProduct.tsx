@@ -13,7 +13,7 @@ import { TabSlideCards } from "./TabSlideCards";
 export function TabsProduct() {
    return (
       <section>
-         <Tabs>
+         <Tabs align={"center"} pt={"3.5rem"} colorScheme={"orange"}>
             <TabList>
                <Tab>Product 1</Tab>
                <Tab>Product 2</Tab>
