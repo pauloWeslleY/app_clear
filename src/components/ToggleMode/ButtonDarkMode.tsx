@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useColorMode, useColorModeValue, IconButton } from "@chakra-ui/react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
@@ -20,3 +21,5 @@ export function ButtonDarkMode(props: any) {
       />
    );
 }
+
+export default memo(ButtonDarkMode);

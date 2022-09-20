@@ -1,5 +1,6 @@
+import { memo } from "react";
 import { Flex, Heading, Stack, Text, Image } from "@chakra-ui/react";
-import { Banner2 } from "./../../data/photos";
+import { Banner2 } from "../../data/photos";
 
 interface HeroProps {
    title: string;
@@ -17,7 +18,7 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
          py={{ base: 20, md: 25 }}
       >
          <Heading
-            fontWeight={"semibold"}
+            fontWeight={"bold"}
             fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
             lineHeight={"110%"}
          >
@@ -41,3 +42,5 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
       </Stack>
    );
 }
+
+export default memo(BannerHero);

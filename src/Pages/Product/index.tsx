@@ -10,15 +10,17 @@ import {
    useBreakpointValue,
 } from "@chakra-ui/react";
 
-import { Navigation } from "../../components/Navigation";
+import { Navigation } from "../../components/Navigation/Navigation";
 import { ProductHero } from "../../components/ProductHero";
-import { CardsProductHero } from "../../components/CardProductHero/Cards";
+import { CardsProductHero } from "../../components/CardProductHero";
 import { TableProductHero } from "../../components/TableProductHero";
 import { SlideCard } from "../../components/SlideCards/SlideCard";
 import { TabsProduct } from "../../components/TabsProduct";
 import { Footer } from "../../components/Footer";
 import { Stats } from "../../components/Stats";
-import { carditems } from "../../data/carditemprops";
+import { HeadTitle } from "../../components/Head";
+
+import { card__items } from "../../data/CardItemProps";
 
 export function Product() {
    const height = useBreakpointValue({ base: "20%", md: "30%" });
@@ -68,16 +70,7 @@ export function Product() {
                <Divider w={"50%"} h={"0.2rem"} bg={"yellow.10"} my={"1rem"} />
             </Flex>
 
-            <Center>
-               <Heading
-                  pt={"3.5rem"}
-                  fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-               >
-                  <Text as={"h3"} fontWeight={"thin"}>
-                     Table Products
-                  </Text>
-               </Heading>
-            </Center>
+            <HeadTitle title="Table Products" />
 
             <Box mx={"auto"} w={"100%"} py={"2rem"}>
                <TableProductHero name="Product" price="12.99" />
@@ -98,7 +91,7 @@ export function Product() {
          </Container>
 
          <Box mx={"auto"} w={"100%"} maxW={"1245px"} py={"5rem"}>
-            {carditems && <SlideCard cards={carditems} />}
+            {card__items && <SlideCard cards={card__items} />}
          </Box>
 
          <Container
@@ -116,6 +109,8 @@ export function Product() {
             </Flex>
 
             <Stats />
+
+            <HeadTitle title="Top Selling Products" />
 
             <TabsProduct />
          </Container>

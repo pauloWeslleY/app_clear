@@ -5,7 +5,7 @@ import Product4 from './../assets/product_4.jpg';
 
 import { CardsProps } from './../types/CardsProps';
 
-const carditems: CardsProps[] = [
+const card__items: CardsProps[] = [
    {
       id: 1,
       name: "Gary Plus Broom",
@@ -44,4 +44,4 @@ const carditems: CardsProps[] = [
    },
 ]
 
-export {carditems}
+export {card__items}

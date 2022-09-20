@@ -1,3 +1,4 @@
+import { memo } from "react";
 import {
    Stack,
    Flex,
@@ -42,3 +43,5 @@ export function ProductHero({ title }: Props) {
       </Flex>
    );
 }
+
+export default memo(ProductHero);

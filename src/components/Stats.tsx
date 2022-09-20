@@ -8,7 +8,20 @@ import {
    Heading,
 } from "@chakra-ui/react";
 
+interface StatsProps {
+   title: string;
+   content: string;
+   discounts: string;
+}
+
 export function Stats() {
+   const content_stats: StatsProps = {
+      title: "Products with Discounts",
+      content:
+         "Description for the number. People always pay attention to numbers.",
+      discounts: "20%",
+   };
+
    return (
       <Container py={5} maxW={"container.lg"}>
          <Grid
@@ -20,28 +33,22 @@ export function Stats() {
             gap={6}
          >
             <GridItem w="100%" colSpan={{ base: 1, sm: 2, md: 2 }}>
-               <Heading as={"h2"}>Medium Length Title</Heading>
+               <Heading as={"h2"}>{content_stats.title}</Heading>
             </GridItem>
             <GridItem w="100%">
                <Flex flexDirection={"column"}>
                   <Text fontSize={"4xl"} fontWeight={"bold"}>
-                     20%
+                     {content_stats.discounts}
                   </Text>
-                  <Box fontSize={"sm"}>
-                     Description for the number. People always pay attention to
-                     numbers.
-                  </Box>
+                  <Box fontSize={"sm"}>{content_stats.content}</Box>
                </Flex>
             </GridItem>
             <GridItem w="100%">
                <Flex flexDirection={"column"}>
                   <Text fontSize={"4xl"} fontWeight={"bold"}>
-                     20%
+                     {content_stats.discounts}
                   </Text>
-                  <Box fontSize={"sm"}>
-                     Description for the number. People always pay attention to
-                     numbers.
-                  </Box>
+                  <Box fontSize={"sm"}>{content_stats.content}</Box>
                </Flex>
             </GridItem>
          </Grid>

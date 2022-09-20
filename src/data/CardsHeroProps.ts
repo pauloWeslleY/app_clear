@@ -1,6 +1,6 @@
 import { FiUsers } from "react-icons/fi";
-import { ImWrench } from "react-icons/im";
-import { MdWork } from "react-icons/md";
+import { MdProductionQuantityLimits } from "react-icons/md";
+import { TbTruckDelivery } from "react-icons/tb";
 
 export interface CardHeroProps {
    id?: string;
@@ -12,7 +12,7 @@ export interface CardHeroProps {
 export const cards__hero: CardHeroProps[] = [
    {
       id: "1",
-      icon: ImWrench,
+      icon: TbTruckDelivery,
       title: "AP® Psychology - Course 5",
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eligendi similique exercitationem optio libero vitae"
    },
@@ -24,7 +24,7 @@ export const cards__hero: CardHeroProps[] = [
    },
    {
       id: "3",
-      icon: MdWork,
+      icon: MdProductionQuantityLimits,
       title: "AP® Psychology - Course 5",
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eligendi similique exercitationem optio libero vitae"
    }

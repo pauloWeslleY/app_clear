@@ -6,6 +6,7 @@ import styles from "./styles.module.scss";
 
 export function CardsItems({ title, content, icon }: CardHeroProps) {
    const { bg__cards_product } = useColor();
+
    return (
       <section>
          <Flex className={styles.card__items}>

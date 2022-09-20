@@ -1,4 +1,6 @@
+import { memo } from "react";
 import { Flex } from "@chakra-ui/react";
+
 import { CardsItems } from "./CardsItems";
 import { cards__hero } from "../../data/CardsHeroProps";
 
@@ -18,3 +20,5 @@ export function CardsProductHero() {
       </Flex>
    );
 }
+
+export default memo(CardsProductHero);

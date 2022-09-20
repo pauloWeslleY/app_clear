@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 export function TabCards() {
    return (
       <section>
-         <Flex p={50} w={"100%"} className={styles.card__container}>
+         <Flex p={50} className={styles.card__container}>
             {tab__cards.map((cards) => (
                <TabCardItems key={cards.id} card={cards} />
             ))}

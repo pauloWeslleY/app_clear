@@ -1,3 +1,4 @@
+import { memo } from "react";
 import {
    Flex,
    Tab,
@@ -7,17 +8,29 @@ import {
    Tabs,
 } from "@chakra-ui/react";
 import { tab__cards } from "../../data/TabCardsProps";
-import { TabCards } from "./TabCards";
-import { TabSlideCards } from "./TabSlideCards";
+import { TabCardProduct, TabCards, TabSlideCards, TabTitle } from "./index";
+
+import styles from "./styles.module.scss";
 
 export function TabsProduct() {
    return (
       <section>
-         <Tabs align={"center"} pt={"3.5rem"} colorScheme={"orange"}>
+         <Tabs
+            align={"center"}
+            pt={"3.5rem"}
+            colorScheme={"orange"}
+            defaultIndex={1}
+         >
             <TabList>
-               <Tab>Product 1</Tab>
-               <Tab>Product 2</Tab>
-               <Tab>Product 3</Tab>
+               <Tab>
+                  <TabTitle title="Cleaning Accessories" />
+               </Tab>
+               <Tab>
+                  <TabTitle title="Cleaning Products" />
+               </Tab>
+               <Tab>
+                  <TabTitle title="Chemicals" />
+               </Tab>
             </TabList>
 
             <TabPanels>
@@ -30,10 +43,16 @@ export function TabsProduct() {
                   </Flex>
                </TabPanel>
                <TabPanel>
-                  <p>three!</p>
+                  <Flex className={styles.card__container}>
+                     {tab__cards.map((cards) => (
+                        <TabCardProduct key={cards.id} card={cards} />
+                     ))}
+                  </Flex>
                </TabPanel>
             </TabPanels>
          </Tabs>
       </section>
    );
 }
+
+export default memo(TabsProduct);

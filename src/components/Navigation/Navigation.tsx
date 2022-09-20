@@ -1,3 +1,4 @@
+import { memo, ReactNode } from "react";
 import {
    Box,
    Flex,
@@ -7,13 +8,12 @@ import {
    useDisclosure,
    chakra,
 } from "@chakra-ui/react";
-import { ReactNode } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link as NavLink } from "react-router-dom";
-import { navlink_props } from "./../../data/navprops";
-import { useColor } from "./../../hooks/useColor";
+import { navlink_props } from "../../data/navprops";
+import { useColor } from "../../hooks/useColor";
 
-import { ButtonDarkMode } from "../ToggleMode";
+import { ButtonDarkMode } from "../ToggleMode/ButtonDarkMode";
 
 import "./styles.scss";
 
@@ -85,3 +85,5 @@ export function Navigation() {
       </Box>
    );
 }
+
+export default memo(Navigation);

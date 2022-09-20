@@ -37,7 +37,7 @@ export function TabCardItems({ card }: Cards) {
                   base: 56,
                   md: 64,
                }}
-               bg={"gray.300"}
+               bg={"orange.400"}
                _dark={{
                   bg: "orange.700",
                }}

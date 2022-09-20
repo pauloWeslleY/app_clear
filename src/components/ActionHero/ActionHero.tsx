@@ -1,4 +1,6 @@
+import { memo } from "react";
 import { Flex, Box, chakra } from "@chakra-ui/react";
+
 interface ActionProps {
    title: string;
    subtitle: string;
@@ -8,7 +10,7 @@ export function ActionHero({ title, subtitle }: ActionProps) {
    return (
       <Flex
          justify={"center"}
-         bg={"orange.300"}
+         bg={"orange.200"}
          _dark={{
             bg: "yellow.800",
          }}
@@ -56,3 +58,5 @@ export function ActionHero({ title, subtitle }: ActionProps) {
       </Flex>
    );
 }
+
+export default memo(ActionHero);

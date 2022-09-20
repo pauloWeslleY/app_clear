@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { memo, ReactElement } from "react";
 import {
    Box,
    SimpleGrid,
@@ -68,3 +68,5 @@ export function MainHero() {
       </Container>
    );
 }
+
+export default memo(MainHero);

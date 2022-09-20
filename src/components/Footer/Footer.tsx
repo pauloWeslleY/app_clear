@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { memo, ReactNode } from "react";
 import {
    Box,
    chakra,
@@ -8,9 +8,9 @@ import {
    VisuallyHidden,
 } from "@chakra-ui/react";
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
-import { menuFooter } from "./MenuFooter";
 
-import { useColor } from "./../../hooks/useColor";
+import { menuFooter } from "./MenuFooter";
+import { useColor } from "../../hooks/useColor";
 
 import { Logo } from "./Logo";
 
@@ -100,3 +100,5 @@ export function Footer({ title }: Footer) {
       </Box>
    );
 }
+
+export default memo(Footer);

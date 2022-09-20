@@ -11,7 +11,7 @@ const config: ThemeConfig = {
 const theme = extendTheme(customTheme, {
    config,
    fonts: {
-      body: 'Roboto'
+      body: `'Roboto', sans-serif`,
    },
    colors: {
       blue: {
