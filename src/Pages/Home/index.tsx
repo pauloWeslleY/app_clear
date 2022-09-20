@@ -15,8 +15,11 @@ import { ActionHero } from "./../../components/ActionHero";
 import { Footer } from "./../../components/Footer";
 
 import { Banner } from "./../../data/photos";
+import { useColor } from "../../hooks/useColor";
 
 export function Home() {
+   const { bg__our_story } = useColor();
+
    return (
       <section>
          <Navigation />
@@ -38,7 +41,7 @@ export function Home() {
                      color={"orange.400"}
                      fontWeight={600}
                      fontSize={"sm"}
-                     bg={"gray.900"}
+                     bg={bg__our_story}
                      p={2}
                      alignSelf={"flex-start"}
                      rounded={"md"}
