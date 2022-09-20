@@ -22,7 +22,7 @@ export function TabCardItems({ card }: Cards) {
             <Box
                bg={"gray.300"}
                h={64}
-               w={"20rem"}
+               w={"18rem"}
                rounded={"lg"}
                shadow={"dark-lg"}
                bgSize={"cover"}
