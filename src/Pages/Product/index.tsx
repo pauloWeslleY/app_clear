@@ -19,6 +19,7 @@ import { Footer } from "../../components/Footer";
 import { Stats } from "../../components/Stats";
 import { HeadTitle } from "../../components/Head";
 
+// import { card__items } from "../../data/CardItemProps";
 import { card__items } from "../../data/CardItemProps";
 
 export function Product() {
