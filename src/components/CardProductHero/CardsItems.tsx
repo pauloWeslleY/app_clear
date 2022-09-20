@@ -20,7 +20,7 @@ export function CardsItems({ title, content, icon }: CardHeroProps) {
                rounded={"md"}
                transition={"all 0.5s ease-in-out"}
                _hover={{
-                  bg: "orange.500",
+                  bg: "blackAlpha.500",
                }}
                cursor={"pointer"}
             >

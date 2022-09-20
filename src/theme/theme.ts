@@ -8,7 +8,12 @@ const config: ThemeConfig = {
    useSystemColorMode: true
 }
 
-const theme = extendTheme(customTheme, {
+// const breakpoints = {
+//    xs: ""
+// }
+
+const theme = extendTheme({
+   customTheme,
    config,
    fonts: {
       body: `'Roboto', sans-serif`,

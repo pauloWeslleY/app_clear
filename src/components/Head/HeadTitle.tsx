@@ -9,12 +9,11 @@ export function HeadTitle({ title }: TitleProps) {
    return (
       <Center>
          <Heading
+            as={"h3"}
             pt={"3.5rem"}
             fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
          >
-            <Text as={"h3"} fontWeight={"thin"}>
-               {title}
-            </Text>
+            <Text fontWeight={"thin"}>{title}</Text>
             <Divider
                w={"50%"}
                mx={"auto"}

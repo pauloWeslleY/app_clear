@@ -1,4 +1,4 @@
-import { memo, ReactNode } from "react";
+import { memo } from "react";
 import {
    Box,
    Flex,
@@ -9,35 +9,18 @@ import {
    chakra,
 } from "@chakra-ui/react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link as NavLink } from "react-router-dom";
-import { navlink_props } from "../../data/navprops";
-import { useColor } from "../../hooks/useColor";
-
 import { ButtonDarkMode } from "../ToggleMode/ButtonDarkMode";
 
-import "./styles.scss";
-
-interface Props {
-   path: string;
-   children: ReactNode;
-}
+import { getNavLinks } from "./NavLinks";
+import { useColor } from "../../hooks/useColor";
 
 export function Navigation() {
    const { isOpen, onOpen, onClose } = useDisclosure();
    const { bg__navigation } = useColor();
 
-   const NavItems: React.FC<any> = ({ children, path }: Props) => (
-      <NavLink to={`/${path}`}>
-         <button className="nav__link">{children}</button>
-      </NavLink>
-   );
-
-   const getNav = () =>
-      navlink_props.map((nav) => (
-         <NavItems key={nav.id} path={nav.path}>
-            {nav.page}
-         </NavItems>
-      ));
+   //[] Button Icon Toggle
+   const iconToggle = isOpen ? <AiOutlineClose /> : <AiOutlineMenu />;
+   const openMenu = () => (isOpen ? onClose : onOpen);
 
    return (
       <Box bg={bg__navigation} shadow={"dark-lg"} px={4}>
@@ -48,13 +31,15 @@ export function Navigation() {
             maxW={"1xl"}
          >
             <IconButton
+               aria-label={"Abrir Menu de Navegação"}
+               icon={iconToggle}
                size={"md"}
-               icon={isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-               aria-label={"Open Menu"}
+               fontSize={"1.2rem"}
                display={{ sm: "flex", md: "none" }}
-               onClick={isOpen ? onClose : onOpen}
                justifyContent={"center"}
+               p={"1rem"}
                bg={"transparent"}
+               onClick={openMenu()}
             />
             <HStack spacing={8}>
                <Box>
@@ -67,7 +52,7 @@ export function Navigation() {
                   spacing={4}
                   display={{ base: "none", md: "flex" }}
                >
-                  {getNav()}
+                  {getNavLinks()}
                </HStack>
             </HStack>
             <HStack align={"flex-end"}>
@@ -76,9 +61,9 @@ export function Navigation() {
          </Flex>
 
          {isOpen ? (
-            <Box pb={4} display={{ md: "none" }}>
-               <Stack as={"nav"} spacing={4}>
-                  {getNav()}
+            <Box pb={4} display={{ md: "block" }}>
+               <Stack as={"nav"} spacing={4} align={"center"}>
+                  {getNavLinks()}
                </Stack>
             </Box>
          ) : null}
