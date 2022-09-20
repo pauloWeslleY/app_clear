@@ -9,10 +9,10 @@ import {
    useBreakpointValue,
 } from "@chakra-ui/react";
 
-import { Navigation } from "../../components/Navigation/Navigation";
+import { Navigation } from "../../components/Navigation";
 import { ProductHero } from "../../components/ProductHero";
 import { CardsProductHero } from "../../components/CardProductHero";
-import { TableProductHero } from "../../components/TableProduct/";
+import { TableProductHero } from "../../components/TableProduct";
 import { SlideCard } from "../../components/SlideCards/SlideCard";
 import { TabsProduct } from "../../components/TabsProduct";
 import { Footer } from "../../components/Footer";

@@ -1,7 +1,7 @@
 import { Container } from "@chakra-ui/react";
 
-import { Navigation } from "../../components/Navigation/Navigation";
-import { BannerHero } from "../../components/BannerHero/BannerHero";
+import { Navigation } from "../../components/Navigation";
+import { BannerHero } from "../../components/BannerHero";
 import { ActionHero } from "./../../components/ActionHero";
 import { MainHero } from "./../../components/MainHero";
 import { HomeHero } from "../../components/HomeHero";

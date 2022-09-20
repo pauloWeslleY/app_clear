@@ -10,7 +10,7 @@ import {
 import { AboutContent, AboutUs } from "../../components/About";
 import { Footer } from "../../components/Footer";
 import { HeadTitle } from "../../components/Head";
-import { Navigation } from "../../components/Navigation/Navigation";
+import { Navigation } from "../../components/Navigation";
 
 export function About() {
    return (

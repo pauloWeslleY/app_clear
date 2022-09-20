@@ -22,6 +22,7 @@ export function ContactContent({ title, content }: ContactProps) {
       "https://api.whatsapp.com/send?phone=+5511966077859&text=Olá! Seja Bem-vindo a nossa Loja de Produtos de Limpeza";
 
    const getLink = () => window.open(link);
+
    return (
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} py={"10rem"}>
          <Stack justify={"center"} spacing={4}>
