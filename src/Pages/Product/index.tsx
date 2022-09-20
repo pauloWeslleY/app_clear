@@ -13,7 +13,7 @@ import {
 import { Navigation } from "../../components/Navigation/Navigation";
 import { ProductHero } from "../../components/ProductHero";
 import { CardsProductHero } from "../../components/CardProductHero";
-import { TableProductHero } from "../../components/TableProductHero";
+import { TableProductHero } from "../../components/TableProduct/";
 import { SlideCard } from "../../components/SlideCards/SlideCard";
 import { TabsProduct } from "../../components/TabsProduct";
 import { Footer } from "../../components/Footer";
@@ -73,7 +73,7 @@ export function Product() {
             <HeadTitle title="Table Products" />
 
             <Box mx={"auto"} w={"100%"} py={"2rem"}>
-               <TableProductHero name="Product" price="12.99" />
+               <TableProductHero />
             </Box>
 
             <Box mx={"auto"} w={"100%"} pt={"4rem"}>

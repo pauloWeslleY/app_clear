@@ -70,7 +70,7 @@ export function SlideCardItem({ card }: Cards) {
                </Heading>
                <Stack direction={"row"} align={"center"}>
                   <Text as={"span"} fontWeight={500} fontSize={"xl"}>
-                     {price}
+                     ${price}
                   </Text>
                </Stack>
             </Stack>

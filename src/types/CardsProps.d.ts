@@ -3,4 +3,6 @@ export interface CardsProps {
    name: string;
    price: string;
    image?: any;
+   typesProducts?: string;
+   formPayment?: string;
 }

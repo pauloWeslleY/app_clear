@@ -13,19 +13,19 @@ export const cards__hero: CardHeroProps[] = [
    {
       id: "1",
       icon: TbTruckDelivery,
-      title: "AP® Psychology - Course 5",
+      title: "Fast Delivery",
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eligendi similique exercitationem optio libero vitae"
    },
    {
       id: "2",
       icon: FiUsers,
-      title: "AP® Psychology - Course 5",
+      title: "Customer Support",
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eligendi similique exercitationem optio libero vitae"
    },
    {
       id: "3",
       icon: MdProductionQuantityLimits,
-      title: "AP® Psychology - Course 5",
+      title: "Quality Products",
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eligendi similique exercitationem optio libero vitae"
    }
 ]

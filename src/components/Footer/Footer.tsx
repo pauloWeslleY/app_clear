@@ -18,17 +18,19 @@ interface Props {
    label: string;
    href: string;
    children: ReactNode;
+   color: string;
 }
 
 interface Footer {
    title: string;
 }
 
-const SocialButton = ({ children, label, href }: Props) => {
+const SocialButton = ({ children, label, href, color }: Props) => {
    const { bg_footer_button, bg_footer_button_hover } = useColor();
    return (
       <chakra.button
          bg={bg_footer_button}
+         color={color}
          rounded={"full"}
          w={8}
          h={8}
@@ -85,13 +87,21 @@ export function Footer({ title }: Footer) {
                   {title}
                </Text>
                <Stack direction={"row"} spacing={6}>
-                  <SocialButton label={"Twitter"} href={"#"}>
+                  <SocialButton label={"Twitter"} href={"#"} color={"blue.500"}>
                      <FaFacebook />
                   </SocialButton>
-                  <SocialButton label={"WhatsApp"} href={"#"}>
+                  <SocialButton
+                     label={"WhatsApp"}
+                     href={"#"}
+                     color={"green.500"}
+                  >
                      <FaWhatsapp />
                   </SocialButton>
-                  <SocialButton label={"Instagram"} href={"#"}>
+                  <SocialButton
+                     label={"Instagram"}
+                     href={"#"}
+                     color={"red.500"}
+                  >
                      <FaInstagram />
                   </SocialButton>
                </Stack>

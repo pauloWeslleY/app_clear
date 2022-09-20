@@ -21,8 +21,8 @@ export function useColor() {
       'whiteAlpha.200'
    );
    const bg_footer_button = useColorModeValue(
-      'blackAlpha.100',
-      'whiteAlpha.100'
+      'gray.100',
+      'gray.700'
    );
 
    return {
