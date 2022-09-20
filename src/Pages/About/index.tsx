@@ -7,10 +7,10 @@ import {
    Image,
    Divider,
 } from "@chakra-ui/react";
+import { Navigation } from "../../components/Navigation";
+import { HeadTitle } from "../../components/Head";
 import { AboutContent, AboutUs } from "../../components/About";
 import { Footer } from "../../components/Footer";
-import { HeadTitle } from "../../components/Head";
-import { Navigation } from "../../components/Navigation";
 
 export function About() {
    return (
@@ -40,7 +40,7 @@ export function About() {
             their ability to get familiar with the product concept so quickly."
          />
 
-         <Footer title="© 2022 Fiq | Limp. All rights reserved" />
+         <Footer />
       </section>
    );
 }

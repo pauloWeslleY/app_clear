@@ -21,8 +21,8 @@ export function TabSlideCards({ cards }: CardSliderProps) {
       spaceBetween: 50,
       slidesPerView: cards.length < 3 ? cards.length : 3,
       navigation: false,
-      draggable: cards.length >= 3,
-      loop: cards.length >= 3,
+      draggable: cards.length >= 3 && true,
+      loop: cards.length >= 3 && true,
       pagination: cards.length >= 3 && {
          clickable: true,
       },

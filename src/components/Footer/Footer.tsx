@@ -51,8 +51,12 @@ const SocialButton = ({ children, label, href, color }: Props) => {
    );
 };
 
-export function Footer({ title }: Footer) {
+export function Footer() {
    const { bg__footer, color__footer, border__color_footer } = useColor();
+   const title__footer: Footer = {
+      title: "© 2022 João Santos de Jesus - Fiq | Limp. All rights reserved.",
+   };
+
    return (
       <Box bg={bg__footer} color={color__footer}>
          <Container
@@ -83,8 +87,8 @@ export function Footer({ title }: Footer) {
                justify={{ base: "center", md: "space-between" }}
                align={{ base: "center", md: "center" }}
             >
-               <Text as={"span"} fontSize={"1rem"} fontWeight={"semibold"}>
-                  {title}
+               <Text as={"span"} fontSize={"0.94rem"} fontWeight={"semibold"}>
+                  {title__footer.title}
                </Text>
                <Stack direction={"row"} spacing={6}>
                   <SocialButton label={"Twitter"} href={"#"} color={"blue.500"}>

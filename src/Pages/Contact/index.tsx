@@ -8,7 +8,7 @@ export function Contact() {
       <section>
          <Navigation />
 
-         <Container maxW={"1200px"} h={"80vh"}>
+         <Container maxW={"1200px"} h={"77vh"}>
             <ContactContent
                title="Contact us!"
                content="Get in touch with FiqLimp, we want to clear your doubts, hear
@@ -16,7 +16,7 @@ export function Contact() {
             />
          </Container>
 
-         <Footer title="© 2022 Fiq | Limp. All rights reserved" />
+         <Footer />
       </section>
    );
 }

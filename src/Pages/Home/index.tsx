@@ -29,7 +29,7 @@ export function Home() {
                span="Our Story"
             />
          </Container>
-         <Footer title="© 2022 Fiq | Limp. All rights reserved" />
+         <Footer />
       </section>
    );
 }
