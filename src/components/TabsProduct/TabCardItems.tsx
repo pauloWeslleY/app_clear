@@ -24,7 +24,7 @@ export function TabCardItems({ card }: Cards) {
                h={64}
                w={"18rem"}
                rounded={"lg"}
-               shadow={"dark-lg"}
+               shadow={"lg"}
                bgSize={"cover"}
                bgPos={"center"}
                style={{

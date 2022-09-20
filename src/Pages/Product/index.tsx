@@ -19,7 +19,6 @@ import { Footer } from "../../components/Footer";
 import { Stats } from "../../components/Stats";
 import { HeadTitle } from "../../components/Head";
 
-// import { card__items } from "../../data/CardItemProps";
 import { card__items } from "../../data/CardItemProps";
 
 export function Product() {
@@ -73,7 +72,7 @@ export function Product() {
             <HeadTitle title="Table Products" />
 
             <Box mx={"auto"} w={"100%"} py={"2rem"}>
-               <TableProductHero />
+               <TableProductHero tableCaption="Products On Sale" />
             </Box>
 
             <Box mx={"auto"} w={"100%"} pt={"4rem"}>

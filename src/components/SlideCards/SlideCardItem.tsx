@@ -24,7 +24,7 @@ export function SlideCardItem({ card }: Cards) {
             maxW={"330px"}
             w={"full"}
             bg={useColorModeValue("gray.100", "orange.800")}
-            boxShadow={"2xl"}
+            boxShadow={"lg"}
             rounded={"lg"}
             pos={"relative"}
             zIndex={1}

@@ -2,11 +2,15 @@ import { memo } from "react";
 import { Table, TableCaption, TableContainer } from "@chakra-ui/react";
 import { TableList, TableHeader } from "./index";
 
-export function TableProductHero() {
+interface TableCaptionProps {
+   tableCaption: string;
+}
+
+export function TableProductHero({ tableCaption }: TableCaptionProps) {
    return (
       <TableContainer>
          <Table colorScheme={"orange"}>
-            <TableCaption>Products On Sale</TableCaption>
+            <TableCaption>{tableCaption}</TableCaption>
             <TableHeader
                name="Types of Products"
                title="Products"

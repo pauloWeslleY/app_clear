@@ -1,6 +1,4 @@
-import { FiUsers } from "react-icons/fi";
-import { MdProductionQuantityLimits } from "react-icons/md";
-import { TbTruckDelivery } from "react-icons/tb";
+import { TbTruckDelivery, MdProductionQuantityLimits,FiUsers } from "react-icons/all";
 
 export interface CardHeroProps {
    id?: string;

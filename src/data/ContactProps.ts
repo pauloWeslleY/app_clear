@@ -1,5 +1,5 @@
-import { BsTelephone, BsGeoAlt } from "react-icons/bs";
-import { HiOutlineMail } from "react-icons/hi";
+import { BsTelephone, BsGeoAlt, HiOutlineMail } from "react-icons/all";
+
 
 export interface ContactProps {
    id?: string;

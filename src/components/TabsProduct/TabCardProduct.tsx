@@ -18,7 +18,7 @@ export function TabCardProduct({ card }: CardProduct) {
             _dark={{
                bg: "orange.800",
             }}
-            shadow={"dark-lg"}
+            shadow={"lg"}
             rounded={"lg"}
             overflow={"hidden"}
             mx={"auto"}

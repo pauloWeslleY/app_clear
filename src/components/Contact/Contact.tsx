@@ -24,7 +24,12 @@ export function ContactContent({ title, content }: ContactProps) {
    const getLink = () => window.open(link);
 
    return (
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} py={"11rem"}>
+      <SimpleGrid
+         columns={{ base: 1, md: 2 }}
+         spacing={10}
+         pt={"10rem"}
+         pb={"9rem"}
+      >
          <Stack justify={"center"} spacing={4}>
             <Heading>{title}</Heading>
             <Text color={"gray.500"} fontSize={"lg"}>
