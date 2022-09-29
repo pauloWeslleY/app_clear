@@ -5,31 +5,30 @@ const customTheme = {};
 
 const config: ThemeConfig = {
    initialColorMode: 'light',
-   useSystemColorMode: true
+   useSystemColorMode: false
 }
 
-// const breakpoints = {
-//    xs: ""
-// }
+const colors = {
+   blue: {
+      10: '#14213D',
+   },
+   yellow: {
+      10: '#FCA311',
+   },
+   gray: {
+      10: '#E5E5E5',
+      40: '#161a1d',
+   }
+}
 
 const theme = extendTheme({
    customTheme,
    config,
    fonts: {
+      heading: `'Roboto', sans-serif`,
       body: `'Roboto', sans-serif`,
    },
-   colors: {
-      blue: {
-         10: '#14213D',
-      },
-      yellow: {
-         10: '#FCA311',
-      },
-      gray: {
-         10: '#E5E5E5',
-         40: '#161a1d',
-      }
-   }
+   colors
 });
 
 export default theme;

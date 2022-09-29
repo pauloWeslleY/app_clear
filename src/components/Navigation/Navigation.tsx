@@ -8,7 +8,7 @@ import {
    useDisclosure,
    chakra,
 } from "@chakra-ui/react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { ButtonDarkMode } from "../ToggleMode/ButtonDarkMode";
 
 import { getNavLinks } from "./NavLinks";
@@ -19,7 +19,7 @@ export function Navigation() {
    const { bg__navigation } = useColor();
 
    //[] Button Icon Toggle
-   const iconToggle = isOpen ? <AiOutlineClose /> : <AiOutlineMenu />;
+   const iconToggle = isOpen ? <CloseIcon /> : <HamburgerIcon />;
    const openMenu = () => (isOpen ? onClose : onOpen);
 
    return (
@@ -34,11 +34,14 @@ export function Navigation() {
                aria-label={"Abrir Menu de Navegação"}
                icon={iconToggle}
                size={"md"}
-               fontSize={"1.2rem"}
-               display={{ sm: "flex", md: "none" }}
-               justifyContent={"center"}
-               p={"1rem"}
-               bg={"transparent"}
+               fontSize={"1.1rem"}
+               display={{ md: "none" }}
+               _hover={{
+                  bg: "transparent",
+               }}
+               _active={{
+                  bg: "transparent",
+               }}
                onClick={openMenu()}
             />
             <HStack spacing={8}>
