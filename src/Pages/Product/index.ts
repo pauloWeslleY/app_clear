@@ -10,7 +10,7 @@ import { Footer } from "../../components/Footer";
 import { Stats } from "../../components/Product/Stats";
 import { HeadTitle } from "../../components/Head";
 
-import { card__items } from "../../data/CardItemProps";
+import { card__items } from "./../../data/CardItemProps";
 import { useColor } from "./../../hooks/useColor";
 import { MotionFlex, item } from "../../animation/animation";
 
