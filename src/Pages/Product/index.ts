@@ -12,6 +12,7 @@ import { HeadTitle } from "../../components/Head";
 
 import { card__items } from "../../data/CardItemProps";
 import { useColor } from "./../../hooks/useColor";
+import { MotionFlex, item } from "../../animation/animation";
 
 export {
    Product,
@@ -25,5 +26,7 @@ export {
    Stats,
    HeadTitle,
    card__items,
-   useColor
+   useColor,
+   MotionFlex,
+   item
 };

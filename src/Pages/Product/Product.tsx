@@ -21,6 +21,8 @@ import {
    HeadTitle,
    card__items,
    useColor,
+   MotionFlex,
+   item,
 } from "./index";
 
 export function Product() {
@@ -31,7 +33,14 @@ export function Product() {
          <Navigation />
          <ProductHero title="Ipsum dolor sed accusam sea voluptua ipsum consetetur diam, consetetur." />
 
-         <Flex alignItems={"center"} justify={"center"} pt={"2.5rem"}>
+         <MotionFlex
+            alignItems={"center"}
+            justify={"center"}
+            pt={"2.5rem"}
+            variants={item}
+            initial={"hidden"}
+            animate={"visible"}
+         >
             <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
                <Text
                   as={"span"}
@@ -53,7 +62,7 @@ export function Product() {
                   Serviços
                </Text>{" "}
             </Heading>
-         </Flex>
+         </MotionFlex>
 
          <Container
             maxW={{
