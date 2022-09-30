@@ -1,5 +1,6 @@
+import { memo } from "react";
 import { Td, Tr } from "@chakra-ui/react";
-import { CardsProps } from "../../../types/CardsProps";
+import { CardsProps } from "./index";
 
 export function TableListItems({
    name,
@@ -16,3 +17,5 @@ export function TableListItems({
       </Tr>
    );
 }
+
+export default memo(TableListItems);

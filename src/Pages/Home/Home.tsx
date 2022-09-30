@@ -6,9 +6,7 @@ import {
    ActionHero,
    CardsHero,
    HomeHero,
-   BoxTeste,
    Footer,
-   Section,
 } from "./index";
 
 export function Home() {
@@ -16,21 +14,20 @@ export function Home() {
       <section>
          <Navigation />
          <BannerHero
-            title="Cleaning Products and"
-            subtitle="Personal Hygiene"
+            title="Produtos de limpeza e"
+            subtitle="Higiene pessoal"
             textContent="Never miss a meeting. Never be late for one too. Keep track of your meetings and receive smart reminders in appropriate times. Read your smart “Daily Agenda” every morning."
          />
-         {/* <Section />
-         <BoxTeste /> */}
+
          <ActionHero
-            title="Are you looking for cleaning products?"
-            subtitle="You can find it here in the Fiq Limp app."
+            title="Está procurando produtos de limpeza?"
+            subtitle="Você pode encontrá-lo aqui!"
          />
          <Container maxW={"1200px"}>
             <CardsHero />
 
             <HomeHero
-               title="Quality Products at the best price"
+               title="Produtos de qualidade e com melhor preço"
                content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore"
                span="Our Story"
             />

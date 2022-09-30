@@ -1,6 +1,6 @@
+import { memo } from "react";
 import { List } from "@chakra-ui/react";
-import { ContactListItem } from "./ContactListItem";
-import { contact__props } from "../../data/ContactProps";
+import { ContactListItem, contact__props } from "./index";
 
 export function ContactList() {
    return (
@@ -15,3 +15,4 @@ export function ContactList() {
       </List>
    );
 }
+export default memo(ContactList);

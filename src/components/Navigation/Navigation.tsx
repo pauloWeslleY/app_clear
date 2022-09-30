@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo } from "react";
 import {
    Box,
    Flex,
@@ -10,25 +10,23 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
-import { ButtonDarkMode, getNavLinks, useColor } from "./index";
-
-const variants = {
-   open: { opacity: 1, x: 0 },
-   closed: { opacity: 0, x: "-100%" },
-};
+import {
+   ButtonDarkMode,
+   getNavLinks,
+   useColor,
+   variantsNavigation,
+} from "./index";
 
 export function Navigation() {
    const { isOpen, onOpen, onClose } = useDisclosure();
-   const { bg__navigation } = useColor();
-
-   const [isOpenNav, setIsOpenNav] = useState(false);
+   const { THEME } = useColor();
 
    //[] Button Icon Toggle
    const iconToggle = isOpen ? <CloseIcon /> : <HamburgerIcon />;
    const openMenu = () => (isOpen ? onClose : onOpen);
 
    return (
-      <Box bg={bg__navigation} shadow={"dark-lg"} px={4}>
+      <Box bg={THEME.COLORS.NAVIGATION_BG} shadow={"dark-lg"} px={4}>
          <Flex
             h={16}
             alignItems={"center"}
@@ -54,7 +52,9 @@ export function Navigation() {
                <Box>
                   <chakra.h1 fontSize={"xl"} fontWeight={"extrabold"} ml={"2"}>
                      App Fiq
-                     <chakra.span color={"yellow.10"}>Limp.</chakra.span>
+                     <chakra.span color={THEME.COLOR.NAV_LOGO_COLOR}>
+                        Limp.
+                     </chakra.span>
                   </chakra.h1>
                </Box>
                <HStack
@@ -70,7 +70,10 @@ export function Navigation() {
             </HStack>
          </Flex>
 
-         <motion.nav animate={isOpen ? "open" : "closed"} variants={variants}>
+         <motion.nav
+            animate={isOpen ? "open" : "closed"}
+            variants={variantsNavigation}
+         >
             {isOpen ? (
                <Box pb={4} display={{ md: "block" }}>
                   <Stack as={"nav"} spacing={4} align={"center"}>

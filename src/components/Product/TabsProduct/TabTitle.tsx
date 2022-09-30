@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Text } from "@chakra-ui/react";
 
 interface TabTitleProps {
@@ -11,3 +12,5 @@ export function TabTitle({ title }: TabTitleProps) {
       </Text>
    );
 }
+
+export default memo(TabTitle);

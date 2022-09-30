@@ -9,7 +9,7 @@ import {
    Container,
 } from "@chakra-ui/react";
 import { BsCheckLg } from "react-icons/bs";
-import { MotionFlex } from "./index";
+import { MotionFlex, useColor } from "./index";
 
 interface CardItemProps {
    title: string;
@@ -18,6 +18,8 @@ interface CardItemProps {
 }
 
 const Cards = ({ title, text, icon }: CardItemProps) => {
+   const { THEME } = useColor();
+
    return (
       <Stack align={"center"} justify={"center"}>
          <MotionFlex
@@ -36,15 +38,15 @@ const Cards = ({ title, text, icon }: CardItemProps) => {
                h={16}
                alignItems={"center"}
                justifyContent={"center"}
-               color={"yellow.10"}
+               color={THEME.COLOR.CARDS_HERO_ICON_COLOR}
                rounded={"full"}
-               bg={"gray.100"}
+               bg={THEME.COLOR.CARDS_HERO_ICON_BG}
                mb={1}
             >
                {icon}
             </Flex>
             <Text fontWeight={600}>{title}</Text>
-            <Text color={"gray.600"}>{text}</Text>
+            <Text color={THEME.COLOR.CARDS_HERO_TEXT_COLOR}>{text}</Text>
          </MotionFlex>
       </Stack>
    );

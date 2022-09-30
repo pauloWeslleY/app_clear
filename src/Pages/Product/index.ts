@@ -11,6 +11,7 @@ import { Stats } from "../../components/Product/Stats";
 import { HeadTitle } from "../../components/Head";
 
 import { card__items } from "../../data/CardItemProps";
+import { useColor } from "./../../hooks/useColor";
 
 export {
    Product,
@@ -24,4 +25,5 @@ export {
    Stats,
    HeadTitle,
    card__items,
+   useColor
 };

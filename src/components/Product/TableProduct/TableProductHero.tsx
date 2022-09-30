@@ -12,10 +12,10 @@ export function TableProductHero({ tableCaption }: TableCaptionProps) {
          <Table colorScheme={"orange"}>
             <TableCaption>{tableCaption}</TableCaption>
             <TableHeader
-               name="Types of Products"
-               title="Products"
-               payment="Form of payment"
-               price="Price"
+               name="Tipos de Produtos"
+               title="Produtos"
+               payment="Formas de pagamentos"
+               price="Preço"
             />
 
             <TableList />

@@ -9,11 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 
-import { menuFooter } from "./MenuFooter";
-import { useColor } from "../../hooks/useColor";
-
-import { Logo } from "./Logo";
-
+import { Logo, menuFooter, useColor } from "./index";
 interface Props {
    label: string;
    href: string;
@@ -26,10 +22,10 @@ interface Footer {
 }
 
 const SocialButton = ({ children, label, href, color }: Props) => {
-   const { bg_footer_button, bg_footer_button_hover } = useColor();
+   const { THEME } = useColor();
    return (
       <chakra.button
-         bg={bg_footer_button}
+         bg={THEME.COLORS.FOOTER_BTN_BG}
          color={color}
          rounded={"full"}
          w={8}
@@ -42,7 +38,7 @@ const SocialButton = ({ children, label, href, color }: Props) => {
          justifyContent={"center"}
          transition={"all 0.3s ease-in-out"}
          _hover={{
-            bg: bg_footer_button_hover,
+            bg: THEME.COLORS.FOOTER_BTN_BG_HOVER,
          }}
       >
          <VisuallyHidden>{label}</VisuallyHidden>
@@ -52,13 +48,13 @@ const SocialButton = ({ children, label, href, color }: Props) => {
 };
 
 export function Footer() {
-   const { bg__footer, color__footer, border__color_footer } = useColor();
+   const { THEME } = useColor();
    const title__footer: Footer = {
-      title: "© 2022 João Santos de Jesus - Fiq | Limp. All rights reserved.",
+      title: "© 2022 João Santos de Jesus - Fiq | Limp. Todos os Direitos Reservados.",
    };
 
    return (
-      <Box bg={bg__footer} color={color__footer}>
+      <Box bg={THEME.COLORS.FOOTER_BG} color={THEME.COLORS.FOOTER_COLORS}>
          <Container
             as={Stack}
             maxW={"6xl"}
@@ -76,7 +72,7 @@ export function Footer() {
          <Box
             borderTopWidth={1}
             borderStyle={"solid"}
-            borderColor={border__color_footer}
+            borderColor={THEME.COLORS.FOOTER_BORDER_COLORS}
          >
             <Container
                as={Stack}

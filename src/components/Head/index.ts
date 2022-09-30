@@ -1,3 +1,5 @@
 import HeadTitle from "./HeadTitle";
 
-export { HeadTitle };
+import { useColor } from "./../../hooks/useColor";
+
+export { HeadTitle, useColor };

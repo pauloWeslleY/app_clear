@@ -1,14 +1,17 @@
 import { memo } from "react";
-import { Box, SimpleGrid, chakra, Flex, Image } from "@chakra-ui/react";
+import { Box, SimpleGrid, chakra, Flex, Image, Text } from "@chakra-ui/react";
 
-import { MotionFlex, container, item, Image11 } from "./index";
+import { MotionFlex, container, Image11, useColor } from "./index";
 
 interface Props {
    title: string;
    subtitle: string;
+   text: string;
 }
 
-export function AboutContent({ title, subtitle }: Props) {
+export function AboutContent({ title, subtitle, text }: Props) {
+   const { THEME } = useColor();
+
    return (
       <MotionFlex variants={container} initial={"hidden"} animate={"visible"}>
          <Box px={8} py={20} mx={"auto"}>
@@ -35,6 +38,17 @@ export function AboutContent({ title, subtitle }: Props) {
                      md: 2,
                   }}
                >
+                  <Text
+                     textTransform={"uppercase"}
+                     color={THEME.COLOR.ABOUT_SPAN_COLOR}
+                     fontWeight={600}
+                     fontSize={"sm"}
+                     p={2}
+                     alignSelf={"flex-start"}
+                     rounded={"md"}
+                  >
+                     {text}
+                  </Text>
                   <chakra.h2
                      mb={4}
                      fontSize={{
@@ -47,10 +61,7 @@ export function AboutContent({ title, subtitle }: Props) {
                         base: "center",
                         md: "left",
                      }}
-                     color={"gray.900"}
-                     _dark={{
-                        color: "gray.400",
-                     }}
+                     color={THEME.COLORS.ABOUT_TITLE_COLORS}
                      lineHeight={{
                         md: "shorter",
                      }}
@@ -63,10 +74,7 @@ export function AboutContent({ title, subtitle }: Props) {
                         base: "center",
                         sm: "left",
                      }}
-                     color={"gray.600"}
-                     _dark={{
-                        color: "gray.400",
-                     }}
+                     color={THEME.COLORS.ABOUT_CONTENT_COLORS}
                      fontSize={{
                         md: "lg",
                      }}

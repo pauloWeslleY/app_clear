@@ -3,45 +3,45 @@ import { CardsProps } from './../types/CardsProps';
 const table__items: CardsProps[] = [
    {
       id: 1,
-      name: "Gary Plus Broom",
+      name: "Vassoura Gary Plus",
       price: "8.55",
-      typesProducts: "Cleaning Products",
-      formPayment: "Cash / Pix"
+      typesProducts: "Produtos de Limpeza",
+      formPayment: "Dinheiro / Pix"
    },
    {
       id: 2,
-      name: "Sanfonado Sink Plunger",
+      name: "Desentupidor Sanfonado",
       price: "5.10",
-      typesProducts: "Chemicals",
-      formPayment: "Cash / Pix"
+      typesProducts: "Produtos Químicos",
+      formPayment: "Dinheiro / Pix"
    },
    {
       id: 3,
-      name: "Lava Bus Wood Base",
+      name: "Base de madeira de ônibus de lava",
       price: "6.50",
-      typesProducts: "Cleaning Products",
-      formPayment: "Cash / Pix"
+      typesProducts: "Produtos de Limpeza",
+      formPayment: "Dinheiro / Pix"
    },
    {
       id: 4,
       name: "Nylon",
       price: "10.00",
-      typesProducts: "Cleaning Products",
-      formPayment: "Cash / Pix"
+      typesProducts: "Produtos de Limpeza",
+      formPayment: "Dinheiro / Pix"
    },
    {
       id: 5,
       name: "Nylon2",
       price: "100.50",
-      typesProducts: "Cleaning Accessories",
-      formPayment: "Cash / Pix"
+      typesProducts: "Acessórios de limpeza",
+      formPayment: "Dinheiro / Pix"
    },
    {
       id: 6,
       name: "Nylon Thine",
       price: "45.00",
-      typesProducts: "Cleaning Accessories",
-      formPayment: "Cash / Pix"
+      typesProducts: "Acessórios de limpeza",
+      formPayment: "Dinheiro / Pix"
    },
 ]
 

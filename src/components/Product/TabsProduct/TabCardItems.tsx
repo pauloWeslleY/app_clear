@@ -1,5 +1,6 @@
+import { memo } from "react";
 import { Box, Flex, chakra } from "@chakra-ui/react";
-import { CardsProps } from "../../../types/CardsProps";
+import { CardsProps, useColor } from "./index";
 
 import styles from "./styles.module.scss";
 
@@ -9,6 +10,7 @@ interface Cards {
 
 export function TabCardItems({ card }: Cards) {
    const { name, image, price } = card;
+   const { THEME } = useColor();
 
    return (
       <section className={styles.card__items}>
@@ -31,16 +33,12 @@ export function TabCardItems({ card }: Cards) {
                   backgroundImage: `url(${image})`,
                }}
             ></Box>
-
             <Box
                w={{
                   base: 56,
                   md: 64,
                }}
-               bg={"orange.400"}
-               _dark={{
-                  bg: "orange.700",
-               }}
+               bg={THEME.COLORS.TAB_CARD_ITEM_BG}
                mt={-10}
                shadow={"lg"}
                rounded={"lg"}
@@ -51,31 +49,21 @@ export function TabCardItems({ card }: Cards) {
                   textAlign={"center"}
                   fontWeight={"bold"}
                   textTransform={"uppercase"}
-                  color={"gray.800"}
-                  _dark={{
-                     color: "white",
-                  }}
+                  color={THEME.COLORS.TAB_CARD_ITEM_TITLE_COLORS}
                   letterSpacing={1}
                >
                   {name}
                </chakra.h3>
-
                <Flex
                   alignItems={"center"}
                   justifyContent={"center"}
                   py={2}
                   px={3}
-                  bg={"gray.200"}
-                  _dark={{
-                     bg: "orange.400",
-                  }}
+                  bg={THEME.COLORS.TAB_CARD_ITEM_SPAN_BG}
                >
                   <chakra.span
                      fontWeight={"bold"}
-                     color={"gray.800"}
-                     _dark={{
-                        color: "gray.900",
-                     }}
+                     color={THEME.COLORS.TAB_CARD_ITEM_SPAN_COLORS}
                   >
                      ${price}
                   </chakra.span>
@@ -85,3 +73,5 @@ export function TabCardItems({ card }: Cards) {
       </section>
    );
 }
+
+export default memo(TabCardItems);

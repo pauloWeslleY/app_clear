@@ -1,8 +1,7 @@
+import { memo } from "react";
 import { Center } from "@chakra-ui/react";
 import { SliderCarousel, Slide, SliderProps } from "../../Slider";
-import { TabCardItems } from "./TabCardItems";
-
-import { CardsProps } from "../../../types/CardsProps";
+import { TabCardItems, CardsProps } from "./index";
 
 interface CardSliderProps {
    cards: CardsProps[];
@@ -51,3 +50,4 @@ export function TabSlideCards({ cards }: CardSliderProps) {
       </SliderCarousel>
    );
 }
+export default memo(TabSlideCards);

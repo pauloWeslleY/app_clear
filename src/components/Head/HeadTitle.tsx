@@ -1,11 +1,13 @@
 import { memo } from "react";
 import { Center, Divider, Heading, Text } from "@chakra-ui/react";
+import { useColor } from "./index";
 
 interface TitleProps {
    title: string;
 }
 
 export function HeadTitle({ title }: TitleProps) {
+   const { THEME } = useColor();
    return (
       <Center>
          <Heading
@@ -17,7 +19,7 @@ export function HeadTitle({ title }: TitleProps) {
             <Divider
                w={"50%"}
                mx={"auto"}
-               bg={"yellow.10"}
+               bg={THEME.COLOR.HEAD_TITLE_LINE_COLOR}
                mt={"0.5rem"}
                pt={"0.5rem"}
             />

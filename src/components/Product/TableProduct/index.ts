@@ -1,5 +1,11 @@
+import TableHeader from "./TableHeader";
 import TableProductHero from "./TableProductHero";
-import { TableList } from "./Table";
-import { TableHeader } from "./TableHeader";
+import TableListItems from "./TableListItems";
 
-export { TableProductHero, TableHeader, TableList };
+import { CardsProps } from "../../../types/CardsProps";
+import { table__items } from "../../../data/TableProps";
+import { TableList } from "./Table";
+
+export { TableProductHero, TableHeader, TableList, TableListItems, table__items };
+
+export type { CardsProps };

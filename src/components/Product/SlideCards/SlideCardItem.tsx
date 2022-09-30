@@ -8,7 +8,7 @@ import {
    Stack,
    Image,
 } from "@chakra-ui/react";
-import { CardsProps } from "./index";
+import { CardsProps, useColor } from "./index";
 
 interface Cards {
    card: CardsProps;
@@ -16,6 +16,7 @@ interface Cards {
 
 export function SlideCardItem({ card }: Cards) {
    const { name, image, price } = card;
+   const { THEME } = useColor();
 
    return (
       <Center py={12}>
@@ -24,7 +25,7 @@ export function SlideCardItem({ card }: Cards) {
             p={6}
             maxW={"330px"}
             w={"full"}
-            bg={useColorModeValue("gray.100", "orange.800")}
+            bg={THEME.COLORS.SLIDE_CARDS_BG}
             boxShadow={"lg"}
             rounded={"lg"}
             pos={"relative"}

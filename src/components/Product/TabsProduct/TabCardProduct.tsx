@@ -1,5 +1,6 @@
+import { memo } from "react";
 import { Box, Image, Text, chakra } from "@chakra-ui/react";
-import { CardsProps } from "../../../types/CardsProps";
+import { CardsProps, useColor } from "./index";
 
 import styles from "./styles.module.scss";
 
@@ -9,15 +10,13 @@ interface CardProduct {
 
 export function TabCardProduct({ card }: CardProduct) {
    const { name, image, price } = card;
+   const { THEME } = useColor();
 
    return (
       <section className={styles.card__items}>
          <Box
             w={"xs"}
-            bg={"orange.400"}
-            _dark={{
-               bg: "orange.800",
-            }}
+            bg={THEME.COLORS.TAB_CARD_PRODUCT_BG}
             shadow={"lg"}
             rounded={"lg"}
             overflow={"hidden"}
@@ -29,10 +28,7 @@ export function TabCardProduct({ card }: CardProduct) {
                <Text
                   as={"h3"}
                   fontSize={"2xl"}
-                  color={"gray.800"}
-                  _dark={{
-                     color: "white",
-                  }}
+                  color={THEME.COLORS.TAB_CARD_PRODUCT_TITLE_COLORS}
                   fontWeight={"extrabold"}
                >
                   {name}
@@ -40,10 +36,7 @@ export function TabCardProduct({ card }: CardProduct) {
                <chakra.span
                   fontWeight={600}
                   fontSize={"sm"}
-                  color={"gray.700"}
-                  _dark={{
-                     color: "gray.200",
-                  }}
+                  color={THEME.COLORS.TAB_CARD_PRODUCT_SPAN_COLORS}
                >
                   ${price}
                </chakra.span>
@@ -52,3 +45,4 @@ export function TabCardProduct({ card }: CardProduct) {
       </section>
    );
 }
+export default memo(TabCardProduct);

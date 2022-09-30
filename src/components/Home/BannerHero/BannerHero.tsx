@@ -9,7 +9,7 @@ import {
    shouldForwardProp,
    chakra,
 } from "@chakra-ui/react";
-import { Banner2, MotionFlex, container, item } from "./index";
+import { Banner2, MotionFlex, container, item, useColor } from "./index";
 
 interface HeroProps {
    title: string;
@@ -23,6 +23,8 @@ const ChakraBox = chakra(motion.div, {
 });
 
 export function BannerHero({ title, subtitle, textContent }: HeroProps) {
+   const { THEME } = useColor();
+
    return (
       <Stack
          w={"full"}
@@ -44,7 +46,11 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
                   lineHeight={"110%"}
                >
                   {title}{" "}
-                  <Text as={"span"} color={"yellow.10"} fontWeight={"thin"}>
+                  <Text
+                     as={"span"}
+                     color={THEME.COLOR.BANNER_SUBTITLE_COLOR}
+                     fontWeight={"thin"}
+                  >
                      {subtitle}
                   </Text>
                </Heading>
@@ -54,7 +60,11 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
                alignItems={"center"}
                justify={"center"}
             >
-               <Text fontSize={"1.2rem"} color={"gray.500"} maxW={"3xl"}>
+               <Text
+                  fontSize={"1.2rem"}
+                  color={THEME.COLOR.BANNER_TEXT_COLOR}
+                  maxW={"3xl"}
+               >
                   {textContent}
                </Text>
             </MotionFlex>
@@ -91,13 +101,12 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
                   width={"12rem"}
                   height={"15rem"}
                >
-                  {/* FiqLimp. */}
                   <Image
                      align={"center"}
                      w={400}
                      objectFit={"cover"}
                      src={Banner2}
-                     alt={"Banner do Site"}
+                     alt={"Banner Animado do Site"}
                   />
                </ChakraBox>
             </Flex>

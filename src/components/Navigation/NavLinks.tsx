@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Link as NavLink } from "react-router-dom";
-import { navlink_props } from "../../data/navprops";
+import { navlink_props } from "./index";
 
 import "./NavLink.scss";
 

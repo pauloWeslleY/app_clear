@@ -1,5 +1,4 @@
 import { memo } from "react";
-
 import {
    Box,
    Container,
@@ -21,11 +20,12 @@ import {
    Stats,
    HeadTitle,
    card__items,
+   useColor,
 } from "./index";
 
 export function Product() {
    const height = useBreakpointValue({ base: "20%", md: "30%" });
-
+   const { THEME } = useColor();
    return (
       <section>
          <Navigation />
@@ -43,14 +43,14 @@ export function Product() {
                      position: "absolute",
                      bottom: 1,
                      left: 0,
-                     bg: "yellow.10",
+                     bg: THEME.COLOR.PRODUCT_TITLE_COLOR,
                      zIndex: -1,
                   }}
                >
-                  Our
+                  Nossos
                </Text>{" "}
-               <Text color={"yellow.10"} as={"span"}>
-                  Services
+               <Text color={THEME.COLOR.PRODUCT_TITLE_COLOR} as={"span"}>
+                  Serviços
                </Text>{" "}
             </Heading>
          </Flex>
@@ -68,13 +68,18 @@ export function Product() {
             <CardsProductHero />
 
             <Flex align={"center"} justify={"center"}>
-               <Divider w={"50%"} h={"0.2rem"} bg={"yellow.10"} my={"1rem"} />
+               <Divider
+                  w={"50%"}
+                  h={"0.2rem"}
+                  bg={THEME.COLOR.HEAD_TITLE_LINE_COLOR}
+                  my={"1rem"}
+               />
             </Flex>
 
-            <HeadTitle title="Table Products" />
+            <HeadTitle title="Tabela de Produtos" />
 
             <Box mx={"auto"} w={"100%"} py={"2rem"}>
-               <TableProductHero tableCaption="Products On Sale" />
+               <TableProductHero tableCaption="Produtos à venda" />
             </Box>
 
             <Box mx={"auto"} w={"100%"} pt={"4rem"}>
@@ -82,10 +87,10 @@ export function Product() {
                   <Divider
                      orientation={"vertical"}
                      pr={"0.2rem"}
-                     bg={"yellow.10"}
+                     bg={THEME.COLOR.HEAD_TITLE_LINE_COLOR}
                   />
                   <Heading fontWeight={"semibold"} fontSize={"2.7rem"}>
-                     Last Releases
+                     Destaques
                   </Heading>
                </Stack>
             </Box>
@@ -106,12 +111,21 @@ export function Product() {
             w={"100%"}
          >
             <Flex align={"center"} justify={"center"}>
-               <Divider w={"50%"} h={"0.2rem"} bg={"yellow.10"} my={"1rem"} />
+               <Divider
+                  w={"50%"}
+                  h={"0.2rem"}
+                  bg={THEME.COLOR.HEAD_TITLE_LINE_COLOR}
+                  my={"1rem"}
+               />
             </Flex>
 
-            <Stats />
+            <Stats
+               title="Cupons de Descontos"
+               content="Na compra de 3 produtos o 4º sai com desconto de"
+               discounts="20%"
+            />
 
-            <HeadTitle title="Top Selling Products" />
+            <HeadTitle title="Produtos mais vendidos" />
 
             <TabsProduct />
          </Container>

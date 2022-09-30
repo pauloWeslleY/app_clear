@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { chakra } from "@chakra-ui/react";
-import { MotionFlex, animations } from "./index";
+import { MotionFlex, animations, useColor } from "./index";
 
 interface ActionProps {
    title: string;
@@ -9,14 +9,12 @@ interface ActionProps {
 
 export function ActionHero({ title, subtitle }: ActionProps) {
    const { ANIMATION } = animations();
+   const { THEME } = useColor();
 
    return (
       <MotionFlex
          justify={"center"}
-         bg={"orange.200"}
-         _dark={{
-            bg: "yellow.800",
-         }}
+         bg={THEME.COLORS.ACTION_HERO_BG}
          w={"full"}
          initial={{ rotate: -45, scale: 0.1 }}
          animate={{ rotate: 0, scale: 1 }}
@@ -53,10 +51,7 @@ export function ActionHero({ title, subtitle }: ActionProps) {
                fontWeight={"extrabold"}
                letterSpacing={"tight"}
                lineHeight={"shorter"}
-               color={"gray.900"}
-               _dark={{
-                  color: "gray.100",
-               }}
+               color={THEME.COLORS.ACTION_HERO_SPAN_COLORS}
                mb={6}
             >
                <MotionFlex variants={ANIMATION.animationItem}>
@@ -65,10 +60,7 @@ export function ActionHero({ title, subtitle }: ActionProps) {
                <MotionFlex variants={ANIMATION.animationItem}>
                   <chakra.span
                      display={"block"}
-                     color={"brand.600"}
-                     _dark={{
-                        color: "gray.500",
-                     }}
+                     color={THEME.COLORS.ACTION_HERO_SPAN_COLORS_2}
                   >
                      {subtitle}
                   </chakra.span>

@@ -21,11 +21,7 @@ export function CardsProductHero() {
                initial={"variantA"}
                whileHover={"variantB"}
             >
-               <CardsItems
-                  title={item.title}
-                  content={item.content}
-                  icon={item.icon}
-               />
+               <CardsItems title={item.title} icon={item.icon} />
             </motion.div>
          ))}
       </Flex>

@@ -7,9 +7,9 @@ import {
    Stack,
    Text,
 } from "@chakra-ui/react";
-
-import { ContactList } from "./ContactList";
 import { BsWhatsapp } from "react-icons/bs";
+
+import { ContactList, useColor } from "./index";
 
 interface ContactProps {
    title: string;
@@ -22,6 +22,7 @@ export function ContactContent({ title, content }: ContactProps) {
       "https://api.whatsapp.com/send?phone=+5511966077859&text=Olá! Seja Bem-vindo a nossa Loja de Produtos de Limpeza";
 
    const getLink = () => window.open(link);
+   const { THEME } = useColor();
 
    return (
       <SimpleGrid
@@ -32,7 +33,7 @@ export function ContactContent({ title, content }: ContactProps) {
       >
          <Stack justify={"center"} spacing={4}>
             <Heading>{title}</Heading>
-            <Text color={"gray.500"} fontSize={"lg"}>
+            <Text color={THEME.COLOR.CONTACT_TEXT_COLOR} fontSize={"lg"}>
                {content}
             </Text>
             <Flex py={"1rem"}>
@@ -45,7 +46,11 @@ export function ContactContent({ title, content }: ContactProps) {
                   fontSize={"1.2rem"}
                   fontWeight={"semibold"}
                   transition={"all 0.2s ease-in-out"}
-                  _hover={{ bg: "#0e9f6e", filter: "brightness(1.6)" }}
+                  _hover={{
+                     bg: "var(--green-40)",
+                     filter: "brightness(1.6)",
+                     transform: "scale(1.1)",
+                  }}
                   onClick={getLink}
                >
                   WhatsApp

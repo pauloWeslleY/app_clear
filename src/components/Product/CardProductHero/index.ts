@@ -2,5 +2,8 @@ import CardsProductHero from "./Cards";
 import CardsItems from "./CardsItems";
 import { CardHeroProps, cards__hero } from "../../../data/CardsHeroProps";
 
-export { CardsProductHero, CardsItems, cards__hero };
+import { useColor } from "../../../hooks/useColor";
+
+
+export { CardsProductHero, CardsItems, cards__hero, useColor };
 export type { CardHeroProps };

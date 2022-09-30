@@ -10,9 +10,8 @@ export function Contact() {
          <Container maxW={"1200px"} h={"100vh"}>
             <MotionFlex variants={item} initial={"hidden"} animate={"visible"}>
                <ContactContent
-                  title="Contact us!"
-                  content="Get in touch with FiqLimp, we want to clear your doubts, hear
-                  your criticisms and suggestions."
+                  title="Entre em contato com a gente!"
+                  content="Entre em contato com a FiqLimp, queremos tirar suas dúvidas, ouvir suas críticas e sugestões."
                />
             </MotionFlex>
          </Container>

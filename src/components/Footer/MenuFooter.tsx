@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-
-import { navlink_props } from "./../../data/navprops";
+import { navlink_props } from "./index";
 
 import "./footer.scss";
 

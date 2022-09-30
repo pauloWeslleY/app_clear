@@ -1,6 +1,5 @@
 import { Tbody } from "@chakra-ui/react";
-import { table__items } from "../../../data/TableProps";
-import { TableListItems } from "./TableListItems";
+import { TableListItems, table__items } from "./index";
 
 export function TableList() {
    return (

@@ -7,22 +7,22 @@ interface NavProps {
 export const navlink_props: NavProps[] = [
    {
       id: "home",
-      page: "Home",
+      page: "Início",
       path: ""
    },
    {
       id: "product",
-      page: "Product",
+      page: "Produtos",
       path: "product"
    },
    {
       id: "about",
-      page: "About",
+      page: "Sobre",
       path: "about"
    },
    {
       id: "contact",
-      page: "Contact",
+      page: "Contatos",
       path: "contact"
    },
 ]

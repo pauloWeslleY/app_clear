@@ -1,16 +1,6 @@
 import { memo } from "react";
-import {
-   Flex,
-   Heading,
-   Image,
-   SimpleGrid,
-   Stack,
-   Text,
-} from "@chakra-ui/react";
-
-import { useColor } from "../../../hooks/useColor";
-
-import { Banner, MotionFlex } from "./index";
+import { Heading, Image, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Banner, MotionFlex, useColor } from "./index";
 
 interface Props {
    title: string;
@@ -19,63 +9,65 @@ interface Props {
 }
 
 export function HomeHero({ title, span, content }: Props) {
-   const { bg__our_story } = useColor();
+   const { THEME } = useColor();
 
    return (
-      <section>
-         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-            <Stack justify={"center"} spacing={4}>
-               <MotionFlex
-                  initial={{ y: -10 }}
-                  animate={{ y: 10 }}
-                  // @ts-ignore no problem in operation, although type error appears.
-                  transition={{
-                     delay: 0.5,
-                     y: { duration: 0.6 },
-                     default: { ease: "linear" },
-                  }}
-                  flexDir={"column"}
-               >
-                  <Text
-                     textTransform={"uppercase"}
-                     color={"orange.400"}
-                     fontWeight={600}
-                     fontSize={"sm"}
-                     bg={bg__our_story}
-                     p={2}
-                     alignSelf={"flex-start"}
-                     rounded={"md"}
-                  >
-                     {span}
-                  </Text>
-                  <Heading
-                     fontWeight={"semibold"}
-                     fontSize={"2.8rem"}
-                     fontFamily={"body"}
-                  >
-                     {title}
-                  </Heading>
-                  <Text color={"gray.600"} fontSize={"lg"} fontWeight={500}>
-                     {content}
-                  </Text>
-               </MotionFlex>
-            </Stack>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+         <Stack justify={"center"} spacing={4}>
             <MotionFlex
-               py={"1.5rem"}
-               initial={{ x: -15 }}
-               animate={{ x: 15 }}
+               initial={{ y: -10 }}
+               animate={{ y: 10 }}
                // @ts-ignore no problem in operation, although type error appears.
-               transition={{ delay: 1, duration: 0.5 }}
+               transition={{
+                  delay: 0.5,
+                  y: { duration: 0.6 },
+                  default: { ease: "linear" },
+               }}
+               flexDir={"column"}
             >
-               <Image
+               <Text
+                  textTransform={"uppercase"}
+                  color={"orange.400"}
+                  fontWeight={600}
+                  fontSize={"sm"}
+                  bg={THEME.COLORS.HOME_HERO_SPAN_BG}
+                  p={2}
+                  alignSelf={"flex-start"}
                   rounded={"md"}
-                  alt={"Imagens do Site"}
-                  src={Banner}
-                  objectFit={"cover"}
-               />
+               >
+                  {span}
+               </Text>
+               <Heading
+                  fontWeight={"semibold"}
+                  fontSize={"2.8rem"}
+                  fontFamily={"body"}
+               >
+                  {title}
+               </Heading>
+               <Text
+                  color={THEME.COLOR.HOME_HERO_TEXT_COLOR}
+                  fontSize={"lg"}
+                  fontWeight={500}
+               >
+                  {content}
+               </Text>
             </MotionFlex>
-         </SimpleGrid>
-      </section>
+         </Stack>
+         <MotionFlex
+            py={"1.5rem"}
+            initial={{ x: -15 }}
+            animate={{ x: 15 }}
+            // @ts-ignore no problem in operation, although type error appears.
+            transition={{ delay: 1, duration: 0.5 }}
+         >
+            <Image
+               rounded={"md"}
+               alt={"Imagens do Site"}
+               src={Banner}
+               objectFit={"cover"}
+            />
+         </MotionFlex>
+      </SimpleGrid>
    );
 }
 

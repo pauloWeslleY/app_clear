@@ -2,7 +2,7 @@ import { memo } from "react";
 import { Avatar, Box, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { AiOutlineUser } from "react-icons/all";
 
-import { MotionFlex, container, item } from "./index";
+import { MotionFlex, item, useColor } from "./index";
 
 interface AboutUsProps {
    name: string;
@@ -11,9 +11,10 @@ interface AboutUsProps {
 }
 
 export function AboutUs({ name, foundation, content }: AboutUsProps) {
+   const { THEME } = useColor();
    return (
       <Stack
-         bg={useColorModeValue("gray.50", "gray.800")}
+         bg={THEME.COLORS.ABOUT_BG}
          py={16}
          px={8}
          spacing={{ base: 8, md: 10 }}
@@ -37,10 +38,7 @@ export function AboutUs({ name, foundation, content }: AboutUsProps) {
             />
 
             <Text fontWeight={600}>{name}</Text>
-            <Text
-               fontSize={"sm"}
-               color={useColorModeValue("gray.400", "gray.400")}
-            >
+            <Text fontSize={"sm"} color={THEME.COLOR.ABOUT_TEXT_COLOR}>
                {foundation}
             </Text>
          </Box>

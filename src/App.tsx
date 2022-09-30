@@ -1,8 +1,13 @@
 import { AppRoutes } from "./routes/app_routes";
+import { BackToTopButton } from "./components/BackToTopButton";
 
 function App() {
-   return <AppRoutes />;
+   return (
+      <section>
+         <AppRoutes />
+         <BackToTopButton />
+      </section>
+   );
 }
 
 export default App;
-

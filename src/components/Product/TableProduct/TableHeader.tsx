@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Th, Thead, Tr } from "@chakra-ui/react";
 
 interface TableProps {
@@ -19,3 +20,5 @@ export function TableHeader({ name, title, price, payment }: TableProps) {
       </Thead>
    );
 }
+
+export default memo(TableHeader);

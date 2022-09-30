@@ -15,6 +15,7 @@ interface Props {
 export function ProductHero({ title }: Props) {
    const fontsSize = useBreakpointValue({ base: "3xl", md: "4xl" });
    const { ANIMATION } = animations();
+
    return (
       <MotionFlex
          initial={{ opacity: 0, scale: 0.5 }}

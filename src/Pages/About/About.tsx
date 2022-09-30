@@ -7,7 +7,6 @@ import {
    AboutUs,
    Footer,
    MotionFlex,
-   container,
    item,
 } from "./index";
 
@@ -23,7 +22,7 @@ export function About() {
                initial={"hidden"}
                animate={"visible"}
             >
-               <HeadTitle title="About Us" />
+               <HeadTitle title="Sobre" />
             </MotionFlex>
             <AboutContent
                title="Decide how you integrate Payments"
@@ -31,6 +30,7 @@ export function About() {
                can use our expansive yet simple API; decide how you
                integrate Payments and build advanced and reliable products
                yourself from scratch."
+               text="Nossa História"
             />
 
             <Flex align={"center"} justify={"center"}>
