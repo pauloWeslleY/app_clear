@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { Box, SimpleGrid, chakra, Flex, Image } from "@chakra-ui/react";
 
-import { Image11 } from "../../data/photos";
+import { MotionFlex, container, item, Image11 } from "./index";
 
 interface Props {
    title: string;
@@ -10,7 +10,7 @@ interface Props {
 
 export function AboutContent({ title, subtitle }: Props) {
    return (
-      <section>
+      <MotionFlex variants={container} initial={"hidden"} animate={"visible"}>
          <Box px={8} py={20} mx={"auto"}>
             <SimpleGrid
                alignItems={"center"}
@@ -85,7 +85,7 @@ export function AboutContent({ title, subtitle }: Props) {
                </Flex>
             </SimpleGrid>
          </Box>
-      </section>
+      </MotionFlex>
    );
 }
 

@@ -10,14 +10,14 @@ const config: ThemeConfig = {
 
 const colors = {
    blue: {
-      10: '#14213D',
+      10: 'var(--blue-10)',
    },
    yellow: {
-      10: '#FCA311',
+      10: 'var(--yellow-10)',
    },
    gray: {
-      10: '#E5E5E5',
-      40: '#161a1d',
+      10: 'var(--gray-10)',
+      40: 'var(--gray-40)',
    }
 }
 

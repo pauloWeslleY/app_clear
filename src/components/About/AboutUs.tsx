@@ -2,6 +2,8 @@ import { memo } from "react";
 import { Avatar, Box, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { AiOutlineUser } from "react-icons/all";
 
+import { MotionFlex, container, item } from "./index";
+
 interface AboutUsProps {
    name: string;
    foundation: string;
@@ -18,13 +20,15 @@ export function AboutUs({ name, foundation, content }: AboutUsProps) {
          align={"center"}
          direction={"column"}
       >
-         <Text
-            fontSize={{ base: "xl", md: "2xl" }}
-            textAlign={"center"}
-            maxW={"3xl"}
-         >
-            {content}
-         </Text>
+         <MotionFlex variants={item} initial={"hidden"} animate={"visible"}>
+            <Text
+               fontSize={{ base: "xl", md: "2xl" }}
+               textAlign={"center"}
+               maxW={"3xl"}
+            >
+               {content}
+            </Text>
+         </MotionFlex>
          <Box textAlign={"center"}>
             <Avatar
                bg={"orange.400"}

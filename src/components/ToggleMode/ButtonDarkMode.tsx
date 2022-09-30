@@ -12,11 +12,17 @@ export function ButtonDarkMode(props: any) {
          size={"md"}
          fontSize={"lg"}
          aria-label={`Switch to ${text} mode`}
-         variant={"ghost"}
          color={"current"}
          marginLeft={"2"}
          onClick={toggleColorMode}
          icon={<SwitchIcon />}
+         bg={"transparent"}
+         _hover={{
+            bg: "transparent",
+         }}
+         _active={{
+            bg: "transparent",
+         }}
          {...props}
       />
    );

@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import {
    Box,
    Flex,
@@ -9,14 +9,19 @@ import {
    chakra,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { ButtonDarkMode } from "../ToggleMode/ButtonDarkMode";
+import { motion } from "framer-motion";
+import { ButtonDarkMode, getNavLinks, useColor } from "./index";
 
-import { getNavLinks } from "./NavLinks";
-import { useColor } from "../../hooks/useColor";
+const variants = {
+   open: { opacity: 1, x: 0 },
+   closed: { opacity: 0, x: "-100%" },
+};
 
 export function Navigation() {
    const { isOpen, onOpen, onClose } = useDisclosure();
    const { bg__navigation } = useColor();
+
+   const [isOpenNav, setIsOpenNav] = useState(false);
 
    //[] Button Icon Toggle
    const iconToggle = isOpen ? <CloseIcon /> : <HamburgerIcon />;
@@ -36,6 +41,7 @@ export function Navigation() {
                size={"md"}
                fontSize={"1.1rem"}
                display={{ md: "none" }}
+               bg={"transparent"}
                _hover={{
                   bg: "transparent",
                }}
@@ -47,7 +53,8 @@ export function Navigation() {
             <HStack spacing={8}>
                <Box>
                   <chakra.h1 fontSize={"xl"} fontWeight={"extrabold"} ml={"2"}>
-                     App Fiq<chakra.span color={"yellow.10"}>Limp.</chakra.span>
+                     App Fiq
+                     <chakra.span color={"yellow.10"}>Limp.</chakra.span>
                   </chakra.h1>
                </Box>
                <HStack
@@ -63,13 +70,15 @@ export function Navigation() {
             </HStack>
          </Flex>
 
-         {isOpen ? (
-            <Box pb={4} display={{ md: "block" }}>
-               <Stack as={"nav"} spacing={4} align={"center"}>
-                  {getNavLinks()}
-               </Stack>
-            </Box>
-         ) : null}
+         <motion.nav animate={isOpen ? "open" : "closed"} variants={variants}>
+            {isOpen ? (
+               <Box pb={4} display={{ md: "block" }}>
+                  <Stack as={"nav"} spacing={4} align={"center"}>
+                     {getNavLinks()}
+                  </Stack>
+               </Box>
+            ) : null}
+         </motion.nav>
       </Box>
    );
 }

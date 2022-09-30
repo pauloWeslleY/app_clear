@@ -3,8 +3,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import theme from "./theme/theme";
+import "./sass/global.scss";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+const element = document.getElementById("root") as HTMLElement;
+ReactDOM.createRoot(element).render(
    <React.StrictMode>
       <ChakraProvider theme={theme}>
          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
