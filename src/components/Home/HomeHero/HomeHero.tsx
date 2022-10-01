@@ -21,7 +21,7 @@ export function HomeHero({ title, span, content }: Props) {
                transition={{
                   delay: 0.5,
                   y: { duration: 0.6 },
-                  default: { ease: "linear" },
+                  default: { ease: "in-out" },
                }}
                flexDir={"column"}
             >
@@ -55,8 +55,8 @@ export function HomeHero({ title, span, content }: Props) {
          </Stack>
          <MotionFlex
             py={"1.5rem"}
-            initial={{ x: -15 }}
-            animate={{ x: 15 }}
+            initial={{ y: -5 }}
+            animate={{ y: 5 }}
             // @ts-ignore no problem in operation, although type error appears.
             transition={{ delay: 1, duration: 0.5 }}
          >

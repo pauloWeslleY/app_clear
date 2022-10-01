@@ -38,10 +38,10 @@ const Cards = ({ title, text, icon }: CardItemProps) => {
                h={16}
                alignItems={"center"}
                justifyContent={"center"}
-               color={THEME.COLOR.CARDS_HERO_ICON_COLOR}
                rounded={"full"}
-               bg={THEME.COLOR.CARDS_HERO_ICON_BG}
                mb={1}
+               color={THEME.COLOR.CARDS_HERO_ICON_COLOR}
+               bg={THEME.COLOR.CARDS_HERO_ICON_BG}
             >
                {icon}
             </Flex>

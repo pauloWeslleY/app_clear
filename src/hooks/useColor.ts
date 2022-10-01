@@ -18,7 +18,7 @@ export function useColor() {
 
          TAB_CARD_ITEM_BG: useColorModeValue("orange.400", "orange.700"),
          TAB_CARD_ITEM_TITLE_COLORS: useColorModeValue("gray.800", "white"),
-         TAB_CARD_ITEM_SPAN_BG: useColorModeValue("gray.200", "orange.400"),
+         TAB_CARD_ITEM_SPAN_BG: useColorModeValue("gray.100", "whiteAlpha.600"),
          TAB_CARD_ITEM_SPAN_COLORS: useColorModeValue("gray.800", "gray.900"),
 
          TAB_CARD_PRODUCT_BG: useColorModeValue("orange.400", "orange.800"),

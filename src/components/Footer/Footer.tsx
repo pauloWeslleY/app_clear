@@ -13,8 +13,8 @@ import { Logo, menuFooter, useColor } from "./index";
 interface Props {
    label: string;
    href: string;
-   children: ReactNode;
    color: string;
+   children: ReactNode;
 }
 
 interface Footer {
@@ -50,7 +50,7 @@ const SocialButton = ({ children, label, href, color }: Props) => {
 export function Footer() {
    const { THEME } = useColor();
    const title__footer: Footer = {
-      title: "© 2022 João Santos de Jesus - Fiq | Limp. Todos os Direitos Reservados.",
+      title: "Copyright © 2022 Todos os Direitos Reservados - João Santos de Jesus.",
    };
 
    return (

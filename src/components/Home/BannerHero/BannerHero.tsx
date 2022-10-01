@@ -32,7 +32,7 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
          align={"center"}
          spacing={{ base: 8, md: 10 }}
          py={{ base: 20, md: 25 }}
-         h={"70vh"}
+         h={"80vh"}
       >
          <motion.div
             variants={container}
@@ -102,11 +102,12 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
                   height={"15rem"}
                >
                   <Image
-                     align={"center"}
-                     w={400}
-                     objectFit={"cover"}
                      src={Banner2}
                      alt={"Banner Animado do Site"}
+                     objectFit={"cover"}
+                     borderRadius={"5.5rem"}
+                     w={400}
+                     align={"center"}
                   />
                </ChakraBox>
             </Flex>
