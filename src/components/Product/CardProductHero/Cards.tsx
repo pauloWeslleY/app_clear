@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { CardsItems, cards__hero } from "./index";
 
-import styles from "./styles.module.scss";
+// import styles from "./styles.module.scss";
 
 export function CardsProductHero() {
    const parent = {
@@ -13,7 +13,7 @@ export function CardsProductHero() {
    };
 
    return (
-      <Flex className={styles.card__container}>
+      <Flex wrap={"wrap"} align={"center"} justify={"center"}>
          {cards__hero.map((item) => (
             <motion.div
                key={item.id}

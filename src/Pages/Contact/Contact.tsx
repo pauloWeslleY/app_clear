@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Container } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { ContactContent, Navigation, Footer, MotionFlex, item } from "./index";
 
 export function Contact() {
@@ -7,14 +7,14 @@ export function Contact() {
       <section>
          <Navigation />
 
-         <Container maxW={"1200px"} h={"100vh"}>
+         <Box h={"100vh"}>
             <MotionFlex variants={item} initial={"hidden"} animate={"visible"}>
                <ContactContent
                   title="Entre em contato com a gente!"
                   content="Entre em contato com a FiqLimp, queremos tirar suas dúvidas, ouvir suas críticas e sugestões."
                />
             </MotionFlex>
-         </Container>
+         </Box>
 
          <Footer />
       </section>

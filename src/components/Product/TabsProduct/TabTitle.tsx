@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Text } from "@chakra-ui/react";
+import { Tab, Text } from "@chakra-ui/react";
 
 interface TabTitleProps {
    title: string;
@@ -7,9 +7,11 @@ interface TabTitleProps {
 
 export function TabTitle({ title }: TabTitleProps) {
    return (
-      <Text as={"span"} fontSize={"1.3rem"}>
-         {title}
-      </Text>
+      <Tab p={3}>
+         <Text as={"span"} fontSize={"1.3rem"}>
+            {title}
+         </Text>
+      </Tab>
    );
 }
 

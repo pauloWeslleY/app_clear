@@ -6,10 +6,9 @@ import { MotionFlex, container, Image11, useColor } from "./index";
 interface Props {
    title: string;
    subtitle: string;
-   text: string;
 }
 
-export function AboutContent({ title, subtitle, text }: Props) {
+export function AboutContent({ title, subtitle }: Props) {
    const { THEME } = useColor();
 
    return (
@@ -38,17 +37,6 @@ export function AboutContent({ title, subtitle, text }: Props) {
                      md: 2,
                   }}
                >
-                  <Text
-                     textTransform={"uppercase"}
-                     color={THEME.COLOR.ABOUT_SPAN_COLOR}
-                     fontWeight={600}
-                     fontSize={"sm"}
-                     p={2}
-                     alignSelf={"flex-start"}
-                     rounded={"md"}
-                  >
-                     {text}
-                  </Text>
                   <chakra.h2
                      mb={4}
                      fontSize={{

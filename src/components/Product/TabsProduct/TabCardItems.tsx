@@ -12,19 +12,18 @@ export function TabCardItems({ card }: Cards) {
 
    return (
       <Flex
-         flexBasis={"100px"}
+         flexBasis={"15rem"}
          flexGrow={1}
          flexShrink={1}
          direction={"column"}
          justifyContent={"center"}
          alignItems={"center"}
-         w={"sm"}
-         m={"2rem"}
+         m={1}
       >
          <Box
             bg={"gray.300"}
             h={64}
-            w={"18rem"}
+            w={"100%"}
             rounded={"lg"}
             shadow={"lg"}
             bgSize={"cover"}
@@ -33,7 +32,8 @@ export function TabCardItems({ card }: Cards) {
                backgroundImage: `url(${image})`,
             }}
          ></Box>
-         <Box
+         <Flex
+            direction={"column"}
             w={{
                base: 56,
                md: 64,
@@ -68,7 +68,7 @@ export function TabCardItems({ card }: Cards) {
                   ${price}
                </chakra.span>
             </Flex>
-         </Box>
+         </Flex>
       </Flex>
    );
 }

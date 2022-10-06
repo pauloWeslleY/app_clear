@@ -64,17 +64,10 @@ export function Product() {
             </Heading>
          </MotionFlex>
 
-         <Container
-            maxW={{
-               base: "1220px",
-               sm: "550px",
-               md: "1024px",
-               lg: "1350px",
-               xl: "8xl",
-            }}
-            w={"100%"}
-         >
-            <CardsProductHero />
+         <Container maxW={"7xl"}>
+            <Box py={"2rem"}>
+               <CardsProductHero />
+            </Box>
 
             <Flex align={"center"} justify={"center"}>
                <Divider
@@ -87,7 +80,7 @@ export function Product() {
 
             <HeadTitle title="Tabela de Produtos" />
 
-            <Box mx={"auto"} w={"100%"} py={"2rem"}>
+            <Box py={"3rem"}>
                <TableProductHero tableCaption="Produtos à venda" />
             </Box>
 
@@ -105,20 +98,11 @@ export function Product() {
             </Box>
          </Container>
 
-         <Box mx={"auto"} w={"100%"} maxW={"1245px"} py={"5rem"}>
+         <Box mx={"auto"} w={"100%"} maxW={"7xl"} py={"5rem"}>
             {card__items && <SlideCard cards={card__items} />}
          </Box>
 
-         <Container
-            maxW={{
-               base: "1220px",
-               sm: "550px",
-               md: "1024px",
-               lg: "1350px",
-               xl: "8xl",
-            }}
-            w={"100%"}
-         >
+         <Container maxW={"7xl"}>
             <Flex align={"center"} justify={"center"}>
                <Divider
                   w={"50%"}

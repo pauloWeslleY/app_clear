@@ -23,7 +23,7 @@ export function Home() {
             title="Está procurando produtos de limpeza?"
             subtitle="Você pode encontrá-lo aqui!"
          />
-         <Container maxW={"1200px"}>
+         <Container maxW={"7xl"}>
             <CardsHero />
 
             <HomeHero

@@ -26,13 +26,14 @@ export function Navigation() {
    const openMenu = () => (isOpen ? onClose : onOpen);
 
    return (
-      <Box bg={THEME.COLORS.NAVIGATION_BG} shadow={"dark-lg"} px={4}>
-         <Flex
-            h={16}
-            alignItems={"center"}
-            justify={"space-around"}
-            maxW={"1xl"}
-         >
+      <Box
+         bg={THEME.COLORS.NAVIGATION_BG}
+         shadow={"dark-lg"}
+         position={"sticky"}
+         top={0}
+         zIndex={5}
+      >
+         <Flex h={16} alignItems={"center"} justify={"space-around"}>
             <IconButton
                aria-label={"Abrir Menu de Navegação"}
                icon={iconToggle}
