@@ -7,7 +7,7 @@ export interface ContactProps {
    icon: any;
 }
 
-export const contact__props: ContactProps[] = [
+export const CONTACT: ContactProps[] = [
    {
       id: "1",
       icon: BsTelephone,

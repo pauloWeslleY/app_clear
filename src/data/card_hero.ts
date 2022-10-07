@@ -1,4 +1,4 @@
-import { TbTruckDelivery, MdProductionQuantityLimits,FiUsers } from "react-icons/all";
+import { TbTruckDelivery, MdProductionQuantityLimits, FiUsers } from "react-icons/all";
 
 export interface CardHeroProps {
    id?: string;
@@ -6,7 +6,7 @@ export interface CardHeroProps {
    icon: any;
 }
 
-export const cards__hero: CardHeroProps[] = [
+export const CARDS_HERO: CardHeroProps[] = [
    {
       id: "1",
       icon: TbTruckDelivery,

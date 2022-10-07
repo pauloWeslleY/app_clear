@@ -2,7 +2,7 @@ import { memo } from "react";
 import { Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-import { CardsItems, cards__hero } from "./index";
+import { CardsItems, CARDS_HERO } from "./index";
 
 // import styles from "./styles.module.scss";
 
@@ -14,7 +14,7 @@ export function CardsProductHero() {
 
    return (
       <Flex wrap={"wrap"} align={"center"} justify={"center"}>
-         {cards__hero.map((item) => (
+         {CARDS_HERO.map((item) => (
             <motion.div
                key={item.id}
                variants={parent}

@@ -1,10 +1,10 @@
 import { Tbody } from "@chakra-ui/react";
-import { TableListItems, table__items } from "./index";
+import { TableListItems, TABLE } from "./index";
 
 export function TableList() {
    return (
       <Tbody>
-         {table__items.map((items) => (
+         {TABLE.map((items) => (
             <TableListItems
                key={items.id}
                name={items.name}

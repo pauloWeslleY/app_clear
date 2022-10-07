@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Box, Flex, chakra } from "@chakra-ui/react";
+import { Box, Flex, chakra, Badge } from "@chakra-ui/react";
 import { CardsProps, useColor } from "./index";
 
 interface Cards {
@@ -40,28 +40,25 @@ export function TabCardItems({ card }: Cards) {
             }}
             bg={THEME.COLORS.TAB_CARD_ITEM_BG}
             mt={-10}
-            shadow={"lg"}
+            shadow={"xl"}
             rounded={"lg"}
             overflow={"hidden"}
          >
             <chakra.h3
                py={2}
                textAlign={"center"}
-               fontWeight={"bold"}
+               fontWeight={"black"}
                textTransform={"uppercase"}
                color={THEME.COLORS.TAB_CARD_ITEM_TITLE_COLORS}
                letterSpacing={1}
             >
-               {name}
+               <Badge bg={"orange.500"} fontSize={"1rem"}>
+                  {name}
+               </Badge>
             </chakra.h3>
-            <Flex
-               alignItems={"center"}
-               justifyContent={"center"}
-               py={2}
-               px={3}
-               bg={THEME.COLORS.TAB_CARD_ITEM_SPAN_BG}
-            >
+            <Flex alignItems={"center"} justifyContent={"center"} py={2} px={3}>
                <chakra.span
+                  fontSize={"xl"}
                   fontWeight={"bold"}
                   color={THEME.COLORS.TAB_CARD_ITEM_SPAN_COLORS}
                >

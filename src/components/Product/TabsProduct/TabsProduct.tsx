@@ -5,7 +5,7 @@ import {
    TabCardItems,
    TabSlideCards,
    TabTitle,
-   tab__cards,
+   TAB_CARDS,
 } from "./index";
 
 export function TabsProduct() {
@@ -33,18 +33,18 @@ export function TabsProduct() {
          <TabPanels>
             <TabPanel>
                <Flex flexWrap={"wrap"}>
-                  {tab__cards.map((cards) => (
+                  {TAB_CARDS.map((cards) => (
                      <TabCardItems key={cards.id} card={cards} />
                   ))}
                </Flex>
             </TabPanel>
             <TabPanel>
-               <Flex>{tab__cards && <TabSlideCards cards={tab__cards} />}</Flex>
-               <Flex>{tab__cards && <TabSlideCards cards={tab__cards} />}</Flex>
+               <Flex>{TAB_CARDS && <TabSlideCards cards={TAB_CARDS} />}</Flex>
+               <Flex>{TAB_CARDS && <TabSlideCards cards={TAB_CARDS} />}</Flex>
             </TabPanel>
             <TabPanel>
                <Flex wrap={"wrap"}>
-                  {tab__cards.map((cards) => (
+                  {TAB_CARDS.map((cards) => (
                      <TabCardProduct key={cards.id} card={cards} />
                   ))}
                </Flex>

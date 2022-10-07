@@ -21,9 +21,16 @@ export function TabCardProduct({ card }: CardProduct) {
          m={1}
          bg={THEME.COLORS.TAB_CARD_PRODUCT_BG}
          shadow={"lg"}
-         rounded={"lg"}
+         rounded={"xl"}
       >
-         <Image w={"full"} h={56} fit={"cover"} src={image} alt={"avatar"} />
+         <Image
+            roundedTop={"xl"}
+            w={"full"}
+            h={56}
+            fit={"cover"}
+            src={image}
+            alt={"avatar"}
+         />
 
          <Box p={2} textAlign={"center"}>
             <Text

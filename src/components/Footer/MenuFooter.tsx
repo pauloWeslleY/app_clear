@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { navlink_props } from "./index";
+import { NAV } from "./index";
 
 import "./footer.scss";
 
@@ -16,7 +16,7 @@ const MenuFooter: React.FC<any> = ({ children, path }: Props) => (
 );
 
 export const menuFooter = () => {
-   return navlink_props.map((props) => (
+   return NAV.map((props) => (
       <MenuFooter key={props.id} path={props.path}>
          {props.page}
       </MenuFooter>

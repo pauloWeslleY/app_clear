@@ -7,4 +7,12 @@ import { useColor } from "./../../hooks/useColor";
 import { Image11 } from "../../data/photos";
 
 
-export { AboutUs, AboutContent, MotionFlex, container, item, Image11, useColor };
+export {
+   AboutUs,
+   AboutContent,
+   MotionFlex,
+   container,
+   item,
+   Image11,
+   useColor
+};

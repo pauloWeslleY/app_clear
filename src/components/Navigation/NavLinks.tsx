@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Link as NavLink } from "react-router-dom";
-import { navlink_props } from "./index";
+import { NAV } from "./index";
 
 import "./NavLink.scss";
 
@@ -16,7 +16,7 @@ const NavItems: React.FC<any> = ({ children, path }: Props) => (
 );
 
 export const getNavLinks = () =>
-   navlink_props.map((nav) => (
+   NAV.map((nav) => (
       <NavItems key={nav.id} path={nav.path}>
          {nav.page}
       </NavItems>

@@ -16,12 +16,12 @@ export function useColor() {
 
          SLIDE_CARDS_BG: useColorModeValue("gray.100", "orange.800"),
 
-         TAB_CARD_ITEM_BG: useColorModeValue("orange.400", "orange.700"),
-         TAB_CARD_ITEM_TITLE_COLORS: useColorModeValue("gray.800", "white"),
-         TAB_CARD_ITEM_SPAN_BG: useColorModeValue("gray.100", "whiteAlpha.600"),
-         TAB_CARD_ITEM_SPAN_COLORS: useColorModeValue("gray.800", "gray.900"),
+         TAB_CARD_ITEM_BG: useColorModeValue("whiteAlpha.400", "blackAlpha.50"),
+         TAB_CARD_ITEM_TITLE_COLORS: useColorModeValue("gray.800", "orange.500"),
+         // TAB_CARD_ITEM_SPAN_BG: useColorModeValue("gray.100", "blackAlpha.400"),
+         TAB_CARD_ITEM_SPAN_COLORS: useColorModeValue("gray.800", "whiteAlpha.900"),
 
-         TAB_CARD_PRODUCT_BG: useColorModeValue("orange.300", "orange.800"),
+         TAB_CARD_PRODUCT_BG: useColorModeValue("whiteAlpha.300", "whiteAlpha.50"),
          TAB_CARD_PRODUCT_TITLE_COLORS: useColorModeValue("gray.800", "white"),
          TAB_CARD_PRODUCT_SPAN_COLORS: useColorModeValue("gray.700", "gray.200"),
 

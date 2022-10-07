@@ -5,7 +5,7 @@ import TabCardItems from './TabCardItems';
 import TabSlideCards from './TabSlideCards';
 
 import { CardsProps } from "../../../types/CardsProps";
-import { tab__cards } from "../../../data/TabCardsProps";
+import { TAB_CARDS } from "../../../data/tab_cards";
 import { useColor } from "../../../hooks/useColor";
 
 
@@ -15,7 +15,7 @@ export {
    TabCardItems,
    TabSlideCards,
    TabTitle,
-   tab__cards,
+   TAB_CARDS,
    useColor,
 };
 export type { CardsProps };

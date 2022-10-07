@@ -4,7 +4,7 @@ interface NavProps {
    path: string;
 }
 
-export const navlink_props: NavProps[] = [
+export const NAV: NavProps[] = [
    {
       id: "home",
       page: "Início",

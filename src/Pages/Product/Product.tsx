@@ -19,7 +19,7 @@ import {
    Footer,
    Stats,
    HeadTitle,
-   card__items,
+   CARDS_PROPS,
    useColor,
    MotionFlex,
    item,
@@ -99,7 +99,7 @@ export function Product() {
          </Container>
 
          <Box mx={"auto"} w={"100%"} maxW={"7xl"} py={"5rem"}>
-            {card__items && <SlideCard cards={card__items} />}
+            {CARDS_PROPS && <SlideCard cards={CARDS_PROPS} />}
          </Box>
 
          <Container maxW={"7xl"}>

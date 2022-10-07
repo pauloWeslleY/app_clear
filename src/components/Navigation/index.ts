@@ -2,9 +2,16 @@ import Navigation from "./Navigation";
 
 import { ButtonDarkMode } from "../ToggleMode/ButtonDarkMode";
 
-import { navlink_props } from "../../data/NavDataProps";
+import { NAV } from "../../data/nav_menu";
 import { getNavLinks } from "./NavLinks";
 import { useColor } from "../../hooks/useColor";
 import { variantsNavigation } from "./../../animation/animation";
 
-export { Navigation, ButtonDarkMode, getNavLinks, navlink_props ,useColor, variantsNavigation };
+export {
+   Navigation,
+   ButtonDarkMode,
+   getNavLinks,
+   NAV,
+   useColor,
+   variantsNavigation
+};

@@ -5,7 +5,7 @@ import Product4 from './../assets/product_4.jpg';
 
 import { CardsProps } from '../types/CardsProps';
 
-const tab__cards: CardsProps[] = [
+const TAB_CARDS: CardsProps[] = [
    {
       id: 1,
       name: "Gary Plus Broom",
@@ -56,4 +56,4 @@ const tab__cards: CardsProps[] = [
    },
 ]
 
-export {tab__cards}
+export {TAB_CARDS}

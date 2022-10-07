@@ -1,6 +1,6 @@
-import { CardsProps } from './../types/CardsProps';
+import { CardsProps } from '../types/CardsProps';
 
-const table__items: CardsProps[] = [
+const TABLE: CardsProps[] = [
    {
       id: 1,
       name: "Vassoura Gary Plus",
@@ -45,4 +45,4 @@ const table__items: CardsProps[] = [
    },
 ]
 
-export {table__items}
+export {TABLE}

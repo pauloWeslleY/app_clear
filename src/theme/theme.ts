@@ -25,8 +25,8 @@ const theme = extendTheme({
    customTheme,
    config,
    fonts: {
-      heading: `'Roboto', sans-serif`,
-      body: `'Roboto', sans-serif`,
+      heading: `'Nunito', sans-serif`,
+      body: `'Nunito', sans-serif`,
    },
    colors
 });

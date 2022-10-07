@@ -21,3 +21,5 @@ export function ContactListItem({ title, icon }: ContactProps) {
 }
 
 export default memo(ContactListItem);
+
+// *8486
