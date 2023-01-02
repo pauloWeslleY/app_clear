@@ -1,19 +1,8 @@
 import { memo } from "react";
-import {
-   Stack,
-   Flex,
-   Text,
-   VStack,
-   useBreakpointValue,
-} from "@chakra-ui/react";
+import { VStack, useBreakpointValue } from "@chakra-ui/react";
 import { Image4, MotionFlex, animations } from "./index";
 
-interface Props {
-   title: string;
-}
-
-export function ProductHero({ title }: Props) {
-   const fontsSize = useBreakpointValue({ base: "3xl", md: "4xl" });
+export function ProductHero() {
    const { ANIMATION } = animations();
 
    return (
@@ -52,20 +41,7 @@ export function ProductHero({ title }: Props) {
                variants={ANIMATION.animationContainer}
                initial={"hidden"}
                animate={"show"}
-            >
-               <Stack maxW={"2xl"} align={"flex-start"} spacing={6}>
-                  <MotionFlex variants={ANIMATION.animationItem}>
-                     <Text
-                        color={"white"}
-                        fontWeight={700}
-                        lineHeight={1.2}
-                        fontSize={fontsSize}
-                     >
-                        {title}
-                     </Text>
-                  </MotionFlex>
-               </Stack>
-            </MotionFlex>
+            ></MotionFlex>
          </VStack>
       </MotionFlex>
    );

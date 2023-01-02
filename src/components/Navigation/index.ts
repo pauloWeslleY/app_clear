@@ -1,6 +1,6 @@
 import Navigation from "./Navigation";
 
-import { ButtonDarkMode } from "../ToggleMode/ButtonDarkMode";
+import { ButtonDarkMode } from "../ToggleMode/";
 
 import { NAV } from "../../data/nav_menu";
 import { getNavLinks } from "./NavLinks";

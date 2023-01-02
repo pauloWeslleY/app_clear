@@ -1,16 +1,12 @@
 import { memo } from "react";
-import { List } from "@chakra-ui/react";
+import { List, ListProps } from "@chakra-ui/react";
 import { ContactListItem, CONTACT } from "./index";
 
-export function ContactList() {
+export function ContactList({ ...props }: ListProps) {
    return (
-      <List spacing={"2rem"}>
-         {CONTACT.map((items) => (
-            <ContactListItem
-               key={items.id}
-               title={items.title}
-               icon={items.icon}
-            />
+      <List {...props} spacing={"2rem"}>
+         {CONTACT.map((items, index) => (
+            <ContactListItem key={index} contact={items} />
          ))}
       </List>
    );

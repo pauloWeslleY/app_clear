@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 
-import { Logo, menuFooter, useColor } from "./index";
+import { Logo, MenuFooterItemLink, useColor } from "./index";
 interface Props {
    label: string;
    href: string;
@@ -65,7 +65,7 @@ export function Footer() {
          >
             <Logo />
             <Stack direction={"row"} spacing={6}>
-               {menuFooter()}
+               <MenuFooterItemLink />
             </Stack>
          </Container>
 

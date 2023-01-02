@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 
 import { CardsItems, CARDS_HERO } from "./index";
 
-// import styles from "./styles.module.scss";
-
 export function CardsProductHero() {
    const parent = {
       variantA: { scale: 1 },
