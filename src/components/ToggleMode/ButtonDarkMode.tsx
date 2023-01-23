@@ -9,13 +9,11 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 function ButtonDarkMode({ ...props }: IconButtonProps) {
    const { toggleColorMode } = useColorMode();
-   const text = useColorModeValue("dark", "light");
    const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
    return (
       <IconButton
          fontSize={"lg"}
-         arial-label={`Switch to ${text} mode`}
          size={"md"}
          color={"current"}
          marginLeft={"2"}

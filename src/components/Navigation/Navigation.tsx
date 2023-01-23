@@ -68,7 +68,7 @@ export function Navigation() {
                </HStack>
             </HStack>
             <HStack align={"flex-end"}>
-               <ButtonDarkMode />
+               <ButtonDarkMode aria-label={"Altera o tema do site"} />
             </HStack>
          </Flex>
 
