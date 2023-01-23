@@ -1,9 +1,10 @@
+import { IconType } from "react-icons/lib";
 import { TbTruckDelivery, MdProductionQuantityLimits, FiUsers } from "react-icons/all";
 
 export interface CardHeroProps {
    id?: string;
    title: string;
-   icon: any;
+   icon: IconType;
 }
 
 export const CARDS_HERO: CardHeroProps[] = [

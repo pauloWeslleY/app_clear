@@ -9,11 +9,22 @@ interface Props {
    children: ReactNode;
 }
 
-const NavItems: React.FC<any> = ({ children, path }: Props) => (
-   <NavLink to={`/${path}`}>
-      <button className="nav__link">{children}</button>
-   </NavLink>
-);
+const NavItems: React.FC<any> = ({ children, path }: Props) => {
+   const scrollUp = () => {
+      window.scrollTo({
+         top: 0,
+         behavior: "smooth",
+      });
+   };
+
+   return (
+      <NavLink to={`/${path}`}>
+         <button className="nav__link" onClick={scrollUp}>
+            {children}
+         </button>
+      </NavLink>
+   );
+};
 
 export const getNavLinks = () =>
    NAV.map((nav) => (

@@ -22,7 +22,7 @@ const ChakraBox = chakra(motion.div, {
       isValidMotionProp(prop) || shouldForwardProp(prop),
 });
 
-export function BannerHero({ title, subtitle, textContent }: HeroProps) {
+function BannerHero({ title, subtitle, textContent }: HeroProps) {
    const { THEME } = useColor();
 
    return (
@@ -31,7 +31,7 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
          textAlign={"center"}
          align={"center"}
          spacing={{ base: 8, md: 10 }}
-         py={{ base: 20, md: 25 }}
+         py={{ base: 20, md: 24 }}
          h={"80vh"}
       >
          <motion.div
@@ -82,7 +82,7 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
             <Flex alignItems={"center"} pt={"5rem"}>
                <ChakraBox
                   animate={{
-                     scale: [1, 2, 2, 1, 1],
+                     scale: [1, 0.7, 0.9, 1.1, 1],
                      rotate: [0, 0, 270, 270, 0],
                      borderRadius: ["20%", "20%", "50%", "50%", "20%"],
                   }}
@@ -94,7 +94,6 @@ export function BannerHero({ title, subtitle, textContent }: HeroProps) {
                      repeatType: "loop",
                   }}
                   padding={"2"}
-                  // bgGradient="linear(to-l, #FCA311, #161a1d)"
                   display={"flex"}
                   justifyContent={"center"}
                   alignItems={"center"}

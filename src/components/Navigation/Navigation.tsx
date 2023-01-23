@@ -28,7 +28,7 @@ export function Navigation() {
    return (
       <Box
          bg={THEME.COLORS.NAVIGATION_BG}
-         shadow={"dark-lg"}
+         shadow={"sm"}
          position={"sticky"}
          top={0}
          zIndex={5}
@@ -36,6 +36,7 @@ export function Navigation() {
          <Flex h={16} alignItems={"center"} justify={"space-around"}>
             <IconButton
                aria-label={"Abrir Menu de Navegação"}
+               type={"button"}
                icon={iconToggle}
                size={"md"}
                fontSize={"1.1rem"}
@@ -67,7 +68,7 @@ export function Navigation() {
                </HStack>
             </HStack>
             <HStack align={"flex-end"}>
-               <ButtonDarkMode />
+               <ButtonDarkMode aria-label={"Altera o tema do site"} />
             </HStack>
          </Flex>
 

@@ -1,20 +1,10 @@
 import { memo } from "react";
 import { Container, Flex, Divider } from "@chakra-ui/react";
-import {
-   Navigation,
-   HeadTitle,
-   AboutContent,
-   AboutUs,
-   Footer,
-   MotionFlex,
-   item,
-} from "./index";
+import { HeadTitle, AboutContent, AboutUs, MotionFlex, item } from "./index";
 
 export function About() {
    return (
-      <section>
-         <Navigation />
-
+      <main>
          <Container maxW={"7xl"}>
             <MotionFlex
                justify={"center"}
@@ -44,9 +34,7 @@ export function About() {
             their ability to get familiar with the product concept so quickly."
             />
          </Container>
-
-         <Footer />
-      </section>
+      </main>
    );
 }
 

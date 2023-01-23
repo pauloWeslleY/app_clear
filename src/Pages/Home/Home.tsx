@@ -1,18 +1,10 @@
 import { memo } from "react";
 import { Container } from "@chakra-ui/react";
-import {
-   Navigation,
-   BannerHero,
-   ActionHero,
-   CardsHero,
-   HomeHero,
-   Footer,
-} from "./index";
+import { BannerHero, ActionHero, CardsHero, HomeHero } from "./index";
 
 export function Home() {
    return (
-      <section>
-         <Navigation />
+      <main>
          <BannerHero
             title="Produtos de limpeza e"
             subtitle="Higiene pessoal"
@@ -32,8 +24,7 @@ export function Home() {
                span="Our Story"
             />
          </Container>
-         <Footer />
-      </section>
+      </main>
    );
 }
 
